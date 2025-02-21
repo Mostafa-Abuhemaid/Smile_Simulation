@@ -1,0 +1,17 @@
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\bin\Debug\net8.0\Smile_Simulation.Infrastructure.deps.json
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\bin\Debug\net8.0\Smile_Simulation.Infrastructure.runtimeconfig.json
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\bin\Debug\net8.0\Smile_Simulation.Infrastructure.dll
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\bin\Debug\net8.0\Smile_Simulation.Infrastructure.pdb
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\bin\Debug\net8.0\Smile_Simulation.Domain.dll
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\bin\Debug\net8.0\Smile_Simulation.Domain.pdb
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\obj\Debug\net8.0\Smile_Simulation.Infrastructure.csproj.AssemblyReference.cache
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\obj\Debug\net8.0\Smile_Simulation.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\obj\Debug\net8.0\Smile_Simulation.Infrastructure.AssemblyInfoInputs.cache
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\obj\Debug\net8.0\Smile_Simulation.Infrastructure.AssemblyInfo.cs
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\obj\Debug\net8.0\Smile_Simulation.Infrastructure.csproj.CoreCompileInputs.cache
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\obj\Debug\net8.0\Smile_Si.C1C2EA0B.Up2Date
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\obj\Debug\net8.0\Smile_Simulation.Infrastructure.dll
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\obj\Debug\net8.0\refint\Smile_Simulation.Infrastructure.dll
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\obj\Debug\net8.0\Smile_Simulation.Infrastructure.pdb
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\obj\Debug\net8.0\Smile_Simulation.Infrastructure.genruntimeconfig.cache
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Infrastructure\obj\Debug\net8.0\ref\Smile_Simulation.Infrastructure.dll

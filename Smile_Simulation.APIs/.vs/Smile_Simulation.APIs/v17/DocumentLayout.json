@@ -1,0 +1,295 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Final Project\\Smile_Simulation.APIs\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|F:\\Final Project\\Smile_Simulation.APIs\\smile_simulation.domain\\entities\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|solutionrelative:smile_simulation.domain\\entities\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|F:\\Final Project\\Smile_Simulation.APIs\\smile_simulation.domain\\entities\\userapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|solutionrelative:smile_simulation.domain\\entities\\userapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4888206F-4678-4382-B73A-BA8364644340}|Smile_Simulation.Infrastructure\\Smile_Simulation.Infrastructure.csproj|f:\\final project\\smile_simulation.apis\\smile_simulation.infrastructure\\data\\smiledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4888206F-4678-4382-B73A-BA8364644340}|Smile_Simulation.Infrastructure\\Smile_Simulation.Infrastructure.csproj|solutionrelative:smile_simulation.infrastructure\\data\\smiledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|F:\\Final Project\\Smile_Simulation.APIs\\smile_simulation.domain\\entities\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|solutionrelative:smile_simulation.domain\\entities\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4888206F-4678-4382-B73A-BA8364644340}|Smile_Simulation.Infrastructure\\Smile_Simulation.Infrastructure.csproj|F:\\Final Project\\Smile_Simulation.APIs\\smile_simulation.infrastructure\\files\\files.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4888206F-4678-4382-B73A-BA8364644340}|Smile_Simulation.Infrastructure\\Smile_Simulation.Infrastructure.csproj|solutionrelative:smile_simulation.infrastructure\\files\\files.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|F:\\Final Project\\Smile_Simulation.APIs\\smile_simulation.domain\\dtos\\doctordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|solutionrelative:smile_simulation.domain\\dtos\\doctordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|F:\\Final Project\\Smile_Simulation.APIs\\smile_simulation.domain\\dtos\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|solutionrelative:smile_simulation.domain\\dtos\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FD28F20-B7A6-43C7-AAFB-B75676032C8B}|Smile_Simulation.Application\\Smile_Simulation.Application.csproj|F:\\Final Project\\Smile_Simulation.APIs\\smile_simulation.application\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FD28F20-B7A6-43C7-AAFB-B75676032C8B}|Smile_Simulation.Application\\Smile_Simulation.Application.csproj|solutionrelative:smile_simulation.application\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|F:\\Final Project\\Smile_Simulation.APIs\\smile_simulation.domain\\interfaces\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|solutionrelative:smile_simulation.domain\\interfaces\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{837C1A7B-85E1-4EC5-99E8-F5020E41AF34}|Smile_Simulation.APIs\\Smile_Simulation.APIs.csproj|F:\\Final Project\\Smile_Simulation.APIs\\smile_simulation.apis\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{837C1A7B-85E1-4EC5-99E8-F5020E41AF34}|Smile_Simulation.APIs\\Smile_Simulation.APIs.csproj|solutionrelative:smile_simulation.apis\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{837C1A7B-85E1-4EC5-99E8-F5020E41AF34}|Smile_Simulation.APIs\\Smile_Simulation.APIs.csproj|F:\\Final Project\\Smile_Simulation.APIs\\smile_simulation.apis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{837C1A7B-85E1-4EC5-99E8-F5020E41AF34}|Smile_Simulation.APIs\\Smile_Simulation.APIs.csproj|solutionrelative:smile_simulation.apis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{837C1A7B-85E1-4EC5-99E8-F5020E41AF34}|Smile_Simulation.APIs\\Smile_Simulation.APIs.csproj|F:\\Final Project\\Smile_Simulation.APIs\\smile_simulation.apis\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{837C1A7B-85E1-4EC5-99E8-F5020E41AF34}|Smile_Simulation.APIs\\Smile_Simulation.APIs.csproj|solutionrelative:smile_simulation.apis\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|F:\\Final Project\\Smile_Simulation.APIs\\smile_simulation.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|solutionrelative:smile_simulation.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|F:\\Final Project\\Smile_Simulation.APIs\\smile_simulation.domain\\enums\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|solutionrelative:smile_simulation.domain\\enums\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|F:\\Final Project\\Smile_Simulation.APIs\\smile_simulation.domain\\enums\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|solutionrelative:smile_simulation.domain\\enums\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|F:\\Final Project\\Smile_Simulation.APIs\\smile_simulation.domain\\smile_simulation.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F0A73847-CE6B-4D3B-BEFD-65B33225EBB6}|Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj|solutionrelative:smile_simulation.domain\\smile_simulation.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{7f40df72-066b-4810-a08b-c0fbed76c948}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PatientDto.cs",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\DTOs\\PatientDto.cs",
+              "RelativeDocumentMoniker": "Smile_Simulation.Domain\\DTOs\\PatientDto.cs",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\DTOs\\PatientDto.cs",
+              "RelativeToolTip": "Smile_Simulation.Domain\\DTOs\\PatientDto.cs",
+              "ViewState": "AQIAAAoAAABgZmZmZmYkwAwAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T09:42:07.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Application\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Smile_Simulation.Application\\Services\\TokenService.cs",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Application\\Services\\TokenService.cs",
+              "RelativeToolTip": "Smile_Simulation.Application\\Services\\TokenService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T09:39:16.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Interfaces\\Services\\ITokenService.cs",
+              "RelativeDocumentMoniker": "Smile_Simulation.Domain\\Interfaces\\Services\\ITokenService.cs",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Interfaces\\Services\\ITokenService.cs",
+              "RelativeToolTip": "Smile_Simulation.Domain\\Interfaces\\Services\\ITokenService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T09:31:05.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SmileDbContext.cs",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\Data\\SmileDbContext.cs",
+              "RelativeDocumentMoniker": "Smile_Simulation.Infrastructure\\Data\\SmileDbContext.cs",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\Data\\SmileDbContext.cs",
+              "RelativeToolTip": "Smile_Simulation.Infrastructure\\Data\\SmileDbContext.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAwwBcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T15:20:37.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Entities\\Patient.cs",
+              "RelativeDocumentMoniker": "Smile_Simulation.Domain\\Entities\\Patient.cs",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Entities\\Patient.cs",
+              "RelativeToolTip": "Smile_Simulation.Domain\\Entities\\Patient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T15:43:21.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\appsettings.json",
+              "RelativeDocumentMoniker": "Smile_Simulation.APIs\\appsettings.json",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\appsettings.json",
+              "RelativeToolTip": "Smile_Simulation.APIs\\appsettings.json",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAABwAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-19T15:52:53.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Smile_Simulation.APIs\\Controllers\\AccountController.cs",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Smile_Simulation.APIs\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T15:52:29.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserApp.cs",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Entities\\UserApp.cs",
+              "RelativeDocumentMoniker": "Smile_Simulation.Domain\\Entities\\UserApp.cs",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Entities\\UserApp.cs",
+              "RelativeToolTip": "Smile_Simulation.Domain\\Entities\\UserApp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T15:22:32.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Entities\\Doctor.cs",
+              "RelativeDocumentMoniker": "Smile_Simulation.Domain\\Entities\\Doctor.cs",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Entities\\Doctor.cs",
+              "RelativeToolTip": "Smile_Simulation.Domain\\Entities\\Doctor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T15:32:56.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DoctorDto.cs",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\DTOs\\DoctorDto.cs",
+              "RelativeDocumentMoniker": "Smile_Simulation.Domain\\DTOs\\DoctorDto.cs",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\DTOs\\DoctorDto.cs",
+              "RelativeToolTip": "Smile_Simulation.Domain\\DTOs\\DoctorDto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T12:35:05.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Files.cs",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\Files\\Files.cs",
+              "RelativeDocumentMoniker": "Smile_Simulation.Infrastructure\\Files\\Files.cs",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\Files\\Files.cs",
+              "RelativeToolTip": "Smile_Simulation.Infrastructure\\Files\\Files.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T12:46:52.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\Program.cs",
+              "RelativeDocumentMoniker": "Smile_Simulation.APIs\\Program.cs",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\Program.cs",
+              "RelativeToolTip": "Smile_Simulation.APIs\\Program.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAvwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T15:57:35.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Smile_Simulation.Domain\\Entities\\BaseEntity.cs",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "Smile_Simulation.Domain\\Entities\\BaseEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T15:21:44.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Roles.cs",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Enums\\Roles.cs",
+              "RelativeDocumentMoniker": "Smile_Simulation.Domain\\Enums\\Roles.cs",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Enums\\Roles.cs",
+              "RelativeToolTip": "Smile_Simulation.Domain\\Enums\\Roles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T15:31:19.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Gender.cs",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Enums\\Gender.cs",
+              "RelativeDocumentMoniker": "Smile_Simulation.Domain\\Enums\\Gender.cs",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Enums\\Gender.cs",
+              "RelativeToolTip": "Smile_Simulation.Domain\\Enums\\Gender.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T15:27:57.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Smile_Simulation.Domain.csproj",
+              "DocumentMoniker": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj",
+              "RelativeDocumentMoniker": "Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj",
+              "ToolTip": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj",
+              "RelativeToolTip": "Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-19T12:23:35.691Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

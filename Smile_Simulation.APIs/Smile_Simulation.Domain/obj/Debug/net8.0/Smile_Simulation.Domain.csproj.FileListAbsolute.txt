@@ -1,0 +1,12 @@
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Domain\bin\Debug\net8.0\Smile_Simulation.Domain.deps.json
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Domain\bin\Debug\net8.0\Smile_Simulation.Domain.dll
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Domain\bin\Debug\net8.0\Smile_Simulation.Domain.pdb
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Domain\obj\Debug\net8.0\Smile_Simulation.Domain.csproj.AssemblyReference.cache
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Domain\obj\Debug\net8.0\Smile_Simulation.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Domain\obj\Debug\net8.0\Smile_Simulation.Domain.AssemblyInfoInputs.cache
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Domain\obj\Debug\net8.0\Smile_Simulation.Domain.AssemblyInfo.cs
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Domain\obj\Debug\net8.0\Smile_Simulation.Domain.csproj.CoreCompileInputs.cache
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Domain\obj\Debug\net8.0\Smile_Simulation.Domain.dll
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Domain\obj\Debug\net8.0\refint\Smile_Simulation.Domain.dll
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Domain\obj\Debug\net8.0\Smile_Simulation.Domain.pdb
+F:\Final Project\Smile_Simulation.APIs\Smile_Simulation.Domain\obj\Debug\net8.0\ref\Smile_Simulation.Domain.dll
