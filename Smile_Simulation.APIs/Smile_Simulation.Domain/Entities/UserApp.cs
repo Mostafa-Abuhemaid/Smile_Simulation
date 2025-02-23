@@ -10,6 +10,8 @@ namespace Smile_Simulation.Domain.Entities
 {
     public class UserApp : IdentityUser
     {
+        public string FullName { get; set; }
+        public string? Image { get; set; }
         public Gender gender { get; set; }
     }
 }

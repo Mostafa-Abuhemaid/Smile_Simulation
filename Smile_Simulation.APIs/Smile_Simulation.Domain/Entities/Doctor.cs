@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Smile_Simulation.Domain.Entities
 {
-    public class Doctor
+    public class Doctor :UserApp
     {
        
         public string Card {  get; set; }

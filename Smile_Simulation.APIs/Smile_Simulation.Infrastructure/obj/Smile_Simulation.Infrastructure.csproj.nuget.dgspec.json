@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\Smile_Simulation.Infrastructure.csproj": {}
+    "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\Smile_Simulation.Infrastructure.csproj": {}
   },
   "projects": {
-    "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj": {
+    "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj",
+        "projectUniqueName": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj",
         "projectName": "Smile_Simulation.Domain",
-        "projectPath": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj",
+        "projectPath": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj",
         "packagesPath": "C:\\Users\\CS\\.nuget\\packages\\",
-        "outputPath": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\obj\\",
+        "outputPath": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.13, )"
@@ -74,14 +78,14 @@
         }
       }
     },
-    "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\Smile_Simulation.Infrastructure.csproj": {
+    "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\Smile_Simulation.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\Smile_Simulation.Infrastructure.csproj",
+        "projectUniqueName": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\Smile_Simulation.Infrastructure.csproj",
         "projectName": "Smile_Simulation.Infrastructure",
-        "projectPath": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\Smile_Simulation.Infrastructure.csproj",
+        "projectPath": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\Smile_Simulation.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\CS\\.nuget\\packages\\",
-        "outputPath": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\obj\\",
+        "outputPath": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -102,8 +106,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj": {
-                "projectPath": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj"
+              "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj": {
+                "projectPath": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj"
               }
             }
           }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Smile_Simulation.Domain.Entities
 {
-    public  class Patient
+    public  class Patient: UserApp
     {
         public int Age { get; set; }
     }

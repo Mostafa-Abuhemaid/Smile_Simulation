@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Application\\Smile_Simulation.Application.csproj": {}
+    "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Application\\Smile_Simulation.Application.csproj": {}
   },
   "projects": {
-    "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Application\\Smile_Simulation.Application.csproj": {
+    "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Application\\Smile_Simulation.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Application\\Smile_Simulation.Application.csproj",
+        "projectUniqueName": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Application\\Smile_Simulation.Application.csproj",
         "projectName": "Smile_Simulation.Application",
-        "projectPath": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Application\\Smile_Simulation.Application.csproj",
+        "projectPath": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Application\\Smile_Simulation.Application.csproj",
         "packagesPath": "C:\\Users\\CS\\.nuget\\packages\\",
-        "outputPath": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Application\\obj\\",
+        "outputPath": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj": {
-                "projectPath": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj"
+              "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj": {
+                "projectPath": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj"
               }
             }
           }
@@ -52,6 +52,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -72,14 +78,14 @@
         }
       }
     },
-    "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj": {
+    "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj",
+        "projectUniqueName": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj",
         "projectName": "Smile_Simulation.Domain",
-        "projectPath": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj",
+        "projectPath": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj",
         "packagesPath": "C:\\Users\\CS\\.nuget\\packages\\",
-        "outputPath": "F:\\Final Project\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\obj\\",
+        "outputPath": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -117,6 +123,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.13, )"

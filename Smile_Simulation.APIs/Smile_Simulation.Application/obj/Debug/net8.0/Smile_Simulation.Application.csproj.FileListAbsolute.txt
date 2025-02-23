@@ -1,0 +1,16 @@
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\bin\Debug\net8.0\Smile_Simulation.Application.deps.json
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\bin\Debug\net8.0\Smile_Simulation.Application.dll
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\bin\Debug\net8.0\Smile_Simulation.Application.pdb
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\bin\Debug\net8.0\Smile_Simulation.Domain.dll
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\bin\Debug\net8.0\Smile_Simulation.Domain.pdb
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\obj\Debug\net8.0\Smile_Simulation.Application.csproj.AssemblyReference.cache
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\obj\Debug\net8.0\Smile_Simulation.Application.GeneratedMSBuildEditorConfig.editorconfig
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\obj\Debug\net8.0\Smile_Simulation.Application.AssemblyInfoInputs.cache
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\obj\Debug\net8.0\Smile_Simulation.Application.AssemblyInfo.cs
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\obj\Debug\net8.0\Smile_Simulation.Application.csproj.CoreCompileInputs.cache
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\obj\Debug\net8.0\Smile_Simulation.Application.sourcelink.json
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\obj\Debug\net8.0\Smile_Si.9107B997.Up2Date
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\obj\Debug\net8.0\Smile_Simulation.Application.dll
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\obj\Debug\net8.0\refint\Smile_Simulation.Application.dll
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\obj\Debug\net8.0\Smile_Simulation.Application.pdb
+F:\Final Project\Smile_Simulation\Smile_Simulation.APIs\Smile_Simulation.Application\obj\Debug\net8.0\ref\Smile_Simulation.Application.dll
