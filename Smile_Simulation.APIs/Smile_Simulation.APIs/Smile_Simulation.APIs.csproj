@@ -21,7 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\Doctor\" />
+    <Folder Include="wwwroot\Doctor\Card\" />
+    <Folder Include="wwwroot\Doctor\Profile\" />
     <Folder Include="wwwroot\Patient\" />
   </ItemGroup>
 

@@ -240,13 +240,13 @@ namespace Smile_Simulation.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Experience")
+                    b.Property<int?>("Experience")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Qualification")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Specialization")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("qualification")
                         .HasColumnType("nvarchar(max)");
 
                     b.ToTable("Doctors", (string)null);

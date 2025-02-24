@@ -11,9 +11,9 @@ namespace Smile_Simulation.Domain.Entities
     {
        
         public string Card {  get; set; }
-        public string? qualification { get; set; }
+        public string? Qualification { get; set; }
         public string? Specialization { get; set; }
-        public string? Experience { get; set; }
+        public int? Experience { get; set; }
 
 
     }

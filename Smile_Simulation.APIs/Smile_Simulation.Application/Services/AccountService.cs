@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
+using Smile_Simulation.Domain.DTOs.AccountDto;
 using Smile_Simulation.Domain.DTOs.DoctorDto;
 using Smile_Simulation.Domain.DTOs.PatientDto;
 using Smile_Simulation.Domain.DTOs.TokenDto;
@@ -33,6 +34,21 @@ namespace Smile_Simulation.Application.Services
             _mapper = mapper;
         }
 
+        public async Task<TokenDTO> LoginAsync(LoginDto LoginDto)
+        {
+            var user = await _userManager.FindByEmailAsync(LoginDto.Email);
+            if (user == null) throw new Exception("Invalid email or password");
+
+            var result = await _signInManager.CheckPasswordSignInAsync(user, LoginDto.Password, false);
+            if (!result.Succeeded) throw new Exception("Invalid email or password");
+
+            return new TokenDTO
+            {
+                Email = LoginDto.Email,
+                Token = await _tokenService.GenerateTokenAsync(user, _userManager)
+            };
+        }
+
         public async Task<TokenDTO> RegisterForDoctorAsync(DoctorDto doctorDto)
         {
             if (doctorDto.Password != doctorDto.ConfirmPassword)
@@ -45,23 +61,28 @@ namespace Smile_Simulation.Application.Services
             if (existingUser != null)
                 throw new Exception("A user with this email already exists.");
 
-            var ImagePath = Files.UploadFile(doctorDto.Image, "Patient");
+            if (doctorDto.Correct == false)
+                throw new Exception("The Card Image is not correct");
 
-            var patient = _mapper.Map<Patient>(doctorDto);
-            patient.Image = ImagePath;
-            var result = await _userManager.CreateAsync(patient, doctorDto.Password);
+            var doctor = _mapper.Map<Doctor>(doctorDto);
+
+          
+            doctor.Image = Files.UploadFile(doctorDto.Image, "Doctor\\Profile");
+            doctor.Card = Files.UploadFile(doctorDto.Card, "Doctor\\Card");
+           
+            var result = await _userManager.CreateAsync(doctor, doctorDto.Password);
 
             if (!result.Succeeded)
-                throw new Exception("patient creation failed");
+                throw new Exception("Doctor creation failed");
 
-            await _userManager.AddToRoleAsync(patient, Roles.Doctor.ToString());
+            await _userManager.AddToRoleAsync(doctor, Roles.Doctor.ToString());
 
-            var res = new TokenDTO
+            return new TokenDTO
             {
                 Email = doctorDto.Email,
-                Token = await _tokenService.GenerateTokenAsync(patient, _userManager)
+                Token = await _tokenService.GenerateTokenAsync(doctor, _userManager)
             };
-            return res;
+           
         }
 
         public async Task<TokenDTO> RegisterForPatientAsync(PatientDto patientDto)
@@ -96,5 +117,6 @@ namespace Smile_Simulation.Application.Services
             };
             return res;
         }
+
     }
 }
