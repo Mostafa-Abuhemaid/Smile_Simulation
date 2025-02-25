@@ -68,5 +68,47 @@ namespace Smile_Simulation.APIs.Controllers
             }
 
         }
+        [HttpPost("ForgetPassword")]
+        public async Task<ActionResult> ForgetPassword([FromBody] ForgotDto request)
+        {
+            try
+            {
+                var result = await _accountService.ForgotPasswordAsync(request);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+
+        }
+
+        [HttpPost("VerifyOTP")]
+        public async Task<ActionResult> VerifyOTP([FromBody] VerifyCodeDto verify)
+        {
+
+            try
+            {
+                var result = await _accountService.VerifyOTPAsync(verify);
+                return result ? Ok("OTP verified successfully.") : BadRequest("Invalid OTP.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpPut("ResetPassword")]
+        public async Task<ActionResult> ResetPassword(ResetPasswordDto resetPassword)
+        {
+            try
+            {
+                var result = await _accountService.ResetPasswordAsync(resetPassword);
+                return result ? Ok("Password updated successfully.") : BadRequest("Failed to update password.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

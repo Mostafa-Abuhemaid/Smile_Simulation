@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Smile_Simulation.Domain.DTOs.AccountDto;
 using Smile_Simulation.Domain.DTOs.DoctorDto;
@@ -24,14 +25,37 @@ namespace Smile_Simulation.Application.Services
         private readonly SignInManager<UserApp> _signInManager;
         private readonly IConfiguration _configuration;
         private readonly ITokenService _tokenService;
+        private readonly IEmailService _emailService;
+        private readonly IMemoryCache _memoryCache;
         private readonly IMapper _mapper;
-        public AccountService(UserManager<UserApp> userManager, SignInManager<UserApp> signInManager, IConfiguration configuration, ITokenService tokenService, IMapper mapper)
+        public AccountService(UserManager<UserApp> userManager, SignInManager<UserApp> signInManager, IConfiguration configuration, ITokenService tokenService, IMapper mapper, IMemoryCache memoryCache, IEmailService emailService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _configuration = configuration;
             _tokenService = tokenService;
             _mapper = mapper;
+            _memoryCache = memoryCache;
+            _emailService = emailService;
+        }
+
+        public async Task<ForgotPasswordDTO> ForgotPasswordAsync(ForgotDto request)
+        {
+            var user = await _userManager.FindByEmailAsync(request.Email);
+            if (user == null)
+            {
+                throw new Exception("Your email is not found.");
+            }
+
+            var otp = new Random().Next(100000, 999999).ToString();
+            _memoryCache.Set(request.Email, otp, TimeSpan.FromMinutes(60));
+            await _emailService.SendEmailAsync(request.Email, "Smile-Simulation", $"Your VerifyOTP code is: {otp}");
+
+            return new ForgotPasswordDTO
+            {
+                Token = await _userManager.GeneratePasswordResetTokenAsync(user),
+                Message = "Check your mail!"
+            };
         }
 
         public async Task<TokenDTO> LoginAsync(LoginDto LoginDto)
@@ -99,10 +123,19 @@ namespace Smile_Simulation.Application.Services
             if (existingUser != null)
                 throw new Exception("A user with this email already exists.");
 
-            var ImagePath = Files.UploadFile(patientDto.Image, "Patient");
 
-            var patient = _mapper.Map<Patient>(patientDto);
-            patient.Image = ImagePath;
+
+            var patient = new Patient
+            { 
+                UserName=patientDto.Email,
+                FullName= patientDto.FullName,
+                Email = patientDto.Email,
+                Age = patientDto.Age,
+                gender=patientDto.gender,
+
+            };
+            patient.Image = Files.UploadFile(patientDto.Image, "Patient");
+       
             var result = await _userManager.CreateAsync(patient, patientDto.Password);
 
             if (!result.Succeeded)
@@ -118,5 +151,32 @@ namespace Smile_Simulation.Application.Services
             return res;
         }
 
+        public async Task<bool> ResetPasswordAsync(ResetPasswordDto resetPassword)
+        {
+            if (resetPassword.NewPassword != resetPassword.ConfirmNewPassword)
+                throw new Exception("Password and Password confirmation do not match");
+
+            var user = await _userManager.FindByEmailAsync(resetPassword.Email);
+            if (user == null) throw new Exception("Email is not found!");
+
+            var result = await _userManager.ResetPasswordAsync(user, resetPassword.Token, resetPassword.NewPassword);
+            if (!result.Succeeded) throw new Exception("Password reset failed");
+
+            return true;
+        }
+
+        public async Task<bool> VerifyOTPAsync(VerifyCodeDto verify)
+        {
+            var user = await _userManager.FindByEmailAsync(verify.Email);
+            if (user == null) throw new Exception($"Email '{verify.Email}' is not found.");
+
+            var cachedOtp = _memoryCache.Get(verify.Email)?.ToString();
+            if (string.IsNullOrEmpty(cachedOtp)) throw new Exception("OTP not found or has expired.");
+
+            if (verify.CodeOTP != cachedOtp) throw new Exception("Invalid OTP.");
+
+            return true;
+        
+          }
     }
 }

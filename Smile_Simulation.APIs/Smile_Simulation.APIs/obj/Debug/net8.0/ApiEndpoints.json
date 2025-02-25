@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "Smile_Simulation.APIs.Controllers.AccountController",
+    "Method": "ForgetPassword",
+    "RelativePath": "api/Account/ForgetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Smile_Simulation.Domain.DTOs.AccountDto.ForgotDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Smile_Simulation.APIs.Controllers.AccountController",
     "Method": "Login",
     "RelativePath": "api/Account/Login",
     "HttpMethod": "POST",
@@ -120,9 +136,41 @@
         "IsRequired": false
       },
       {
-        "Name": "Gender",
+        "Name": "gender",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Smile_Simulation.APIs.Controllers.AccountController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Account/ResetPassword",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resetPassword",
+        "Type": "Smile_Simulation.Domain.DTOs.AccountDto.ResetPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Smile_Simulation.APIs.Controllers.AccountController",
+    "Method": "VerifyOTP",
+    "RelativePath": "api/Account/VerifyOTP",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "verify",
+        "Type": "Smile_Simulation.Domain.DTOs.AccountDto.VerifyCodeDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

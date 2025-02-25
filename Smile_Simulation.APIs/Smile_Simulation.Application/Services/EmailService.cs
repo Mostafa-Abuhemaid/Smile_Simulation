@@ -7,10 +7,11 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Smile_Simulation.Domain.DTOs.EmailDto;
+using Smile_Simulation.Domain.Interfaces.Services;
 
 namespace Smile_Simulation.Application.Services
 {
-    public class EmailService
+    public class EmailService:IEmailService
     {
         private readonly EmailDto _emailDto;
 
@@ -18,6 +19,7 @@ namespace Smile_Simulation.Application.Services
         {
             _emailDto = mailSettings.Value;
         }
+
         public async Task SendEmailAsync(string email, string subject, string message)
         {
             var mailMessage = new MailMessage

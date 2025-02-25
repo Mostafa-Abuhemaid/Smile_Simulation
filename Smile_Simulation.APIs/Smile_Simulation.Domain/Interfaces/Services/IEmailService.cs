@@ -9,6 +9,6 @@ namespace Smile_Simulation.Domain.Interfaces.Services
 {
     public interface IEmailService
     {
-        Task SendEmail(string email, string subject, string message);
+        Task SendEmailAsync(string email, string subject, string message);
     }
 }

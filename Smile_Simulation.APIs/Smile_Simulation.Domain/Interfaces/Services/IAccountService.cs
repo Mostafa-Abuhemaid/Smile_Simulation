@@ -15,6 +15,9 @@ namespace Smile_Simulation.Domain.Interfaces.Services
         public  Task<TokenDTO> RegisterForPatientAsync(PatientDto patientDTO);
         public Task<TokenDTO> RegisterForDoctorAsync(DoctorDto doctorDto);
         Task<TokenDTO> LoginAsync(LoginDto loginDto);
+        Task<ForgotPasswordDTO> ForgotPasswordAsync(ForgotDto request);
+        Task<bool> VerifyOTPAsync(VerifyCodeDto verify);
+        Task<bool> ResetPasswordAsync(ResetPasswordDto resetPassword);
 
     }
 }

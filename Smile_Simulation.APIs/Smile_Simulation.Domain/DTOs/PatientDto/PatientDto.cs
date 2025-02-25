@@ -25,7 +25,7 @@ namespace Smile_Simulation.Domain.DTOs.PatientDto
         [Required(ErrorMessage = "The Image is Required")]
         public IFormFile Image { get; set; }
         [Required(ErrorMessage = "The Gender is Required")]
-        public Gender Gender { get; set; }
+        public Gender gender { get; set; }
 
 
     }

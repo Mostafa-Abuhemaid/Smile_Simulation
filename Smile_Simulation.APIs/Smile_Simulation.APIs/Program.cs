@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Smile_Simulation.Application.Services;
+using Smile_Simulation.Domain.DTOs.EmailDto;
 using Smile_Simulation.Domain.Entities;
 using Smile_Simulation.Domain.Interfaces.Services;
 using Smile_Simulation.Infrastructure.Data;
@@ -36,6 +37,9 @@ namespace Smile_Simulation.APIs
             builder.Services.AddScoped<IAccountService, AccountService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddAutoMapper(typeof(Program));
+            builder.Services.Configure<EmailDto>(configuration.GetSection("MailSettings"));
+            builder.Services.AddTransient<IEmailService, EmailService>();
+            builder.Services.AddMemoryCache();
             // Configure JWT authentication
             builder.Services.AddAuthentication(options =>
             {
