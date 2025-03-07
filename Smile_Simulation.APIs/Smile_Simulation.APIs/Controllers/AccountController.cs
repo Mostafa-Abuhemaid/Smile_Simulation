@@ -8,6 +8,7 @@ using Smile_Simulation.Domain.DTOs.TokenDto;
 using Smile_Simulation.Domain.Entities;
 using Smile_Simulation.Domain.Enums;
 using Smile_Simulation.Domain.Interfaces.Services;
+using Smile_Simulation.Domain.Response;
 
 
 namespace Smile_Simulation.APIs.Controllers
@@ -29,11 +30,14 @@ namespace Smile_Simulation.APIs.Controllers
             try
             {
                 var result = await _accountService.RegisterForPatientAsync(patientDto);
-                return Ok(result);
+                var response = new BaseResponse<TokenForRegister>(true, "تم انشاء الحساب بنجاح", result);
+                return Ok(response);
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                
+                var errorResponse = new BaseResponse<object>(false, ex.Message);
+                return BadRequest(errorResponse);
             }
 
         }
@@ -45,11 +49,13 @@ namespace Smile_Simulation.APIs.Controllers
             try
             {
                 var result = await _accountService.RegisterForDoctorAsync(doctorDto);
-                return Ok(result);
+                var response = new BaseResponse<TokenForRegister>(true, "تم انشاء الحساب بنجاح", result);
+                return Ok(response);
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                var errorResponse = new BaseResponse<object>(false, ex.Message);
+                return BadRequest(errorResponse);
             }
 
         }
@@ -60,11 +66,15 @@ namespace Smile_Simulation.APIs.Controllers
             try
             {
                 var result = await _accountService.LoginAsync(loginDto);
-                return Ok(result);
+                var response = new BaseResponse<TokenDTO>(true, "تم تسجيل الدخول بنجاح", result);
+                return Ok(response);
+
+             
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                  var errorResponse = new BaseResponse<object>(false, ex.Message);
+                  return BadRequest(errorResponse);
             }
 
         }
@@ -74,11 +84,13 @@ namespace Smile_Simulation.APIs.Controllers
             try
             {
                 var result = await _accountService.ForgotPasswordAsync(request);
-                return Ok(result);
+                var response = new BaseResponse<ForgotPasswordDTO>(true, "تحقق من بريدك الاكتروني", result);
+                return Ok(response);
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                var errorResponse = new BaseResponse<object>(false, ex.Message);
+                return BadRequest(errorResponse);
             }
 
         }
@@ -90,11 +102,13 @@ namespace Smile_Simulation.APIs.Controllers
             try
             {
                 var result = await _accountService.VerifyOTPAsync(verify);
-                return result ? Ok("OTP verified successfully.") : BadRequest("Invalid OTP.");
+                var response = new BaseResponse<ForgotPasswordDTO>(true, "تم التحقق من الرمز بنجاح");
+                return Ok(response);
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                var errorResponse = new BaseResponse<object>(false, ex.Message);
+                return BadRequest(errorResponse);
             }
         }
         [HttpPut("ResetPassword")]
@@ -103,11 +117,13 @@ namespace Smile_Simulation.APIs.Controllers
             try
             {
                 var result = await _accountService.ResetPasswordAsync(resetPassword);
-                return result ? Ok("Password updated successfully.") : BadRequest("Failed to update password.");
+                var response = new BaseResponse<ForgotPasswordDTO>(true, "تم تحديث كلمة المرور بنجاح");
+                return Ok(response);
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                var errorResponse = new BaseResponse<object>(false, ex.Message);
+                return BadRequest(errorResponse);
             }
         }
     }

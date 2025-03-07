@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Smile_Simulation.Application.Services;
@@ -21,15 +22,19 @@ namespace Smile_Simulation.APIs
 
             // Add services to the container.
             builder.Services.AddDbContext<SmileDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers(options =>
+            {
+                options.Filters.Add(new ProducesAttribute("application/json")); // Force JSON response
+            });
+
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             // Configure Identity
             builder.Services.AddIdentity<UserApp, IdentityRole>()
-                .AddRoles<IdentityRole>() // Enable role management
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<SmileDbContext>()
                 .AddDefaultTokenProviders();
 
@@ -40,6 +45,7 @@ namespace Smile_Simulation.APIs
             builder.Services.Configure<EmailDto>(configuration.GetSection("MailSettings"));
             builder.Services.AddTransient<IEmailService, EmailService>();
             builder.Services.AddMemoryCache();
+
             // Configure JWT authentication
             builder.Services.AddAuthentication(options =>
             {
@@ -69,8 +75,17 @@ namespace Smile_Simulation.APIs
 
             var app = builder.Build();
 
-     
-      
+            // Global Exception Handling Middleware to Ensure JSON Error Responses
+            app.UseExceptionHandler(appBuilder =>
+            {
+                appBuilder.Run(async context =>
+                {
+                    context.Response.StatusCode = 500;
+                    context.Response.ContentType = "application/json";
+                    var response = new { message = "An internal server error occurred." };
+                    await context.Response.WriteAsJsonAsync(response);
+                });
+            });
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -79,16 +94,14 @@ namespace Smile_Simulation.APIs
                 app.UseSwaggerUI();
             }
 
-            app.UseStaticFiles(); // Serve static files
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
-
             app.UseRouting();
 
-            // Authentication must come before Authorization
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.MapControllers();
+            app.MapControllers(); // No need for app.UseEndpoints()
 
             app.Run();
         }

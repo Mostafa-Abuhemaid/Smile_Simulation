@@ -23,8 +23,8 @@ namespace Smile_Simulation.Application.Mapping
             CreateMap<DoctorDto, Doctor>()
                  .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Email))
                  .ForMember(dest => dest.Image, opt => opt.Ignore())  
-                 .ForMember(dest => dest.Card, opt => opt.Ignore())   
-                  .ForMember(dest => dest.Qualification, opt => opt.MapFrom(src => src.Qualification ?? string.Empty)) // إذا كانت null ضع قيمة فارغة
+                 .ForMember(dest => dest.Card, opt => opt.Ignore())
+                  .ForMember(dest => dest.Qualification, opt => opt.MapFrom(src => src.Qualification ?? string.Empty)) 
                 .ForMember(dest => dest.Specialization, opt => opt.MapFrom(src => src.Specialization ?? string.Empty))
                 .ForMember(dest => dest.Experience, opt => opt.MapFrom(src => src.Experience ?? 0));
         }

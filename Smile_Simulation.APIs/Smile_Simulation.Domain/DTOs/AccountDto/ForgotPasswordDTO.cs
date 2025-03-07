@@ -9,7 +9,7 @@ namespace Smile_Simulation.Domain.DTOs.AccountDto
     public class ForgotPasswordDTO
     {
         public string Token { get; set; }
-        public string Message { get; set; }
+        
 
     }
 }

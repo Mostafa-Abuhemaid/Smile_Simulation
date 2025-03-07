@@ -12,8 +12,8 @@ namespace Smile_Simulation.Domain.Interfaces.Services
 {
     public interface IAccountService
     {
-        public  Task<TokenDTO> RegisterForPatientAsync(PatientDto patientDTO);
-        public Task<TokenDTO> RegisterForDoctorAsync(DoctorDto doctorDto);
+        public  Task<TokenForRegister> RegisterForPatientAsync(PatientDto patientDTO);
+        public Task<TokenForRegister> RegisterForDoctorAsync(DoctorDto doctorDto);
         Task<TokenDTO> LoginAsync(LoginDto loginDto);
         Task<ForgotPasswordDTO> ForgotPasswordAsync(ForgotDto request);
         Task<bool> VerifyOTPAsync(VerifyCodeDto verify);
