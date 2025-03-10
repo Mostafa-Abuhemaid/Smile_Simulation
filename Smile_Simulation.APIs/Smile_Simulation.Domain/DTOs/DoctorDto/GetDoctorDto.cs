@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Smile_Simulation.Domain.DTOs.DoctorDto
 {
-    public class DoctorDto
+    public class GetDoctorDto
     {
 
         [Required(ErrorMessage = "The FullName is Required")]

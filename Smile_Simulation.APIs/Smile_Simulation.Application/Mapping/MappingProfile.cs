@@ -14,13 +14,13 @@ namespace Smile_Simulation.Application.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<PatientDto, Patient>()
+            CreateMap<GetPatientDto, Patient>()
               .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Email))
               .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName))
               .ForMember(dest => dest.gender, opt => opt.MapFrom(src => src.gender))
               .ForMember(dest => dest.Image, opt => opt.Ignore());
 
-            CreateMap<DoctorDto, Doctor>()
+            CreateMap<GetDoctorDto, Doctor>()
                  .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Email))
                  .ForMember(dest => dest.Image, opt => opt.Ignore())  
                  .ForMember(dest => dest.Card, opt => opt.Ignore())

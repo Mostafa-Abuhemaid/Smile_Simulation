@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Smile_Simulation.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+004f7b093ab40222589f9611d2668b00bc8983cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79de3fbaafd2d5e4c0b27306a0f8f6c7db07f878")]
 [assembly: System.Reflection.AssemblyProductAttribute("Smile_Simulation.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Smile_Simulation.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

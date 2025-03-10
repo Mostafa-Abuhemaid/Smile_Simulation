@@ -11,7 +11,7 @@ namespace Smile_Simulation.Domain.Response
     {
         public bool Success { get; set; }
         public string Message { get; set; }
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
         public T? Data { get; set; }
 
         public BaseResponse(bool success, string message, T data)

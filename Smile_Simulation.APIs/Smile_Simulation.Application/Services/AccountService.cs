@@ -9,6 +9,7 @@ using Smile_Simulation.Domain.DTOs.TokenDto;
 using Smile_Simulation.Domain.Entities;
 using Smile_Simulation.Domain.Enums;
 using Smile_Simulation.Domain.Interfaces.Services;
+using Smile_Simulation.Domain.Response;
 using Smile_Simulation.Infrastructure.Files;
 using System;
 using System.Collections.Generic;
@@ -40,65 +41,70 @@ namespace Smile_Simulation.Application.Services
             _emailService = emailService;
         }
 
-        public async Task<ForgotPasswordDTO> ForgotPasswordAsync(ForgotDto request)
+        public async Task<BaseResponse<ForgotPasswordDTO>> ForgotPasswordAsync(ForgotDto request)
         {
             var user = await _userManager.FindByEmailAsync(request.Email);
             if (user == null)
-            {
-                throw new Exception("لم يتم العثور على بريدك الإلكتروني");
-            }
+                return new BaseResponse<ForgotPasswordDTO>(false, "لم يتم العثور على بريدك الإلكتروني");
 
             var otp = new Random().Next(100000, 999999).ToString();
             _memoryCache.Set(request.Email, otp, TimeSpan.FromMinutes(60));
             await _emailService.SendEmailAsync(request.Email, "Smile-Simulation", $"Your VerifyOTP code is: {otp}");
 
-            return new ForgotPasswordDTO
+            var res= new ForgotPasswordDTO
             {
                 Token = await _userManager.GeneratePasswordResetTokenAsync(user),
-                
+
             };
+          return  new BaseResponse<ForgotPasswordDTO>(true, "تحقق من بريدك الاكتروني", res);
         }
 
-        public async Task<TokenDTO> LoginAsync(LoginDto LoginDto)
+        public async Task<BaseResponse<TokenDTO>> LoginAsync(LoginDto loginDto)
         {
-            var user = await _userManager.FindByEmailAsync(LoginDto.Email);
-            if (user == null) throw new Exception("البريد الاكتروني غير صحيح ");
+            var user = await _userManager.FindByEmailAsync(loginDto.Email);
+            if (user == null) return new BaseResponse<TokenDTO>(false, "البريد الاكتروني غير صحيح");
 
-            var result = await _signInManager.CheckPasswordSignInAsync(user, LoginDto.Password, false);
-            if (!result.Succeeded) throw new Exception("كلمة السر غير صحيحة");
+            var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+
+            if (!result.Succeeded) return new BaseResponse<TokenDTO>(false, "كلمة السر غير صحيحة");
+
             var Url = $"{_configuration["BaseURL"]}/Images/Product/{user.Image}";
-            return new TokenDTO
+            var res = new TokenDTO
             {
                 Email = user.Email,
-                FullName= user.FullName,
-                gender=user.gender,
-                Image= Url,
+                FullName = user.FullName,
+                gender = user.gender,
+                Image = Url,
                 Token = await _tokenService.GenerateTokenAsync(user, _userManager)
             };
-        }
 
-        public async Task<TokenForRegister> RegisterForDoctorAsync(DoctorDto doctorDto)
+            return new BaseResponse<TokenDTO>(true, "تم تسجيل الدخول بنجاح", res);
+        }
+    
+    
+
+        public async Task<BaseResponse<TokenForRegister>> RegisterForDoctorAsync(GetDoctorDto doctorDto)
         {
             if (doctorDto.Password != doctorDto.ConfirmPassword)
-                throw new Exception("كلمة المرور وتأكيد كلمة المرور لا يتطابقان");
+              return new BaseResponse<TokenForRegister>(false,"كلمة المرور وتأكيد كلمة المرور لا يتطابقان");
 
             if (!new EmailAddressAttribute().IsValid(doctorDto.Email))
-                throw new Exception("تنسيق البريد الإلكتروني غير صالح");
+                return new BaseResponse<TokenForRegister>(false,"تنسيق البريد الإلكتروني غير صالح");
 
 
             var existingUser = await _userManager.FindByEmailAsync(doctorDto.Email);
             if (existingUser != null)
-                throw new Exception("يوجد مستخدم لديه هذا البريد الإلكتروني بالفعل.");
+                return new BaseResponse<TokenForRegister>(false,"يوجد مستخدم لديه هذا البريد الإلكتروني بالفعل.");
 
-            var passwordPattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$";
+
+            var passwordPattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$";
             if (!Regex.IsMatch(doctorDto.Password, passwordPattern))
             {
-                throw new Exception("كلمة المرور يجب أن تحتوي على أحرف كبيرة وصغيرة وأرقام ورموز.");
+                return new BaseResponse<TokenForRegister>(false, "كلمة المرور يجب أن تحتوي على أحرف كبيرة وصغيرة وأرقام ورموز");
             }
 
-
             if (doctorDto.Correct == false)
-                throw new Exception("صورة الكارنية غير صحيحة");
+                return new BaseResponse<TokenForRegister>(false,"صورة الكارنية غير صحيحة");
 
             var doctor = new Doctor
             {
@@ -118,38 +124,42 @@ namespace Smile_Simulation.Application.Services
             var result = await _userManager.CreateAsync(doctor, doctorDto.Password);
 
             if (!result.Succeeded)
-                throw new Exception("فشل إنشاء الحساب");
+                return new BaseResponse<TokenForRegister>(false,"فشل إنشاء الحساب");
 
 
             await _userManager.AddToRoleAsync(doctor, Roles.Doctor.ToString());
 
-            return new TokenForRegister
+        var response= new TokenForRegister
             {
                 Email = doctorDto.Email,
 
                 Token = await _tokenService.GenerateTokenAsync(doctor, _userManager)
             };
-           
+            return new BaseResponse<TokenForRegister>(true, "تم انشاء الحساب بنجاح", response);
+
+
         }
 
-        public async Task<TokenForRegister> RegisterForPatientAsync(PatientDto patientDto)
+        
+
+        public async Task<BaseResponse<TokenForRegister>> RegisterForPatientAsync(GetPatientDto patientDto)
         {
     
 
             if (patientDto.Password != patientDto.ConfirmPassword)
-                throw new Exception("كلمة المرور وتأكيد كلمة المرور لا يتطابقان");
+               return new BaseResponse<TokenForRegister>(false,"كلمة المرور وتأكيد كلمة المرور لا يتطابقان");
 
             if (!new EmailAddressAttribute().IsValid(patientDto.Email))
-                throw new Exception("تنسيق البريد الإلكتروني غير صالح");
+                return new BaseResponse<TokenForRegister>(false,"تنسيق البريد الإلكتروني غير صالح");
 
             var existingUser = await _userManager.FindByEmailAsync(patientDto.Email);
             if (existingUser != null)
-                throw new Exception("يوجد مستخدم لديه هذا البريد الإلكتروني بالفعل");
+                return new BaseResponse<TokenForRegister>(false,"يوجد مستخدم لديه هذا البريد الإلكتروني بالفعل");
 
-            var passwordPattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$";
+            var passwordPattern =@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$";
             if (!Regex.IsMatch(patientDto.Password, passwordPattern))
             {
-                throw new Exception("كلمة المرور يجب أن تحتوي على أحرف كبيرة وصغيرة وأرقام ورموز");
+                return new BaseResponse<TokenForRegister>(false,"كلمة المرور يجب أن تحتوي على أحرف كبيرة وصغيرة وأرقام ورموز");
             }
 
 
@@ -167,44 +177,62 @@ namespace Smile_Simulation.Application.Services
             var result = await _userManager.CreateAsync(patient, patientDto.Password);
 
             if (!result.Succeeded)
-                throw new Exception("فشل إنشاء الحساب");
+               return new BaseResponse<TokenForRegister>(false,"فشل إنشاء الحساب");
 
             await _userManager.AddToRoleAsync(patient,Roles.Patient.ToString());
 
-            return new TokenForRegister
+            var response= new TokenForRegister
             {
                 Email = patientDto.Email,
                 Token = await _tokenService.GenerateTokenAsync(patient, _userManager)
             };
-        
+            return new BaseResponse<TokenForRegister>(true, "تم انشاء الحساب بنجاح", response);
+
+
         }
 
-        public async Task<bool> ResetPasswordAsync(ResetPasswordDto resetPassword)
+       
+
+        public async Task<BaseResponse<bool>> ResetPasswordAsync(ResetPasswordDto resetPassword)
         {
             if (resetPassword.NewPassword != resetPassword.ConfirmNewPassword)
-                throw new Exception("كلمة المرور وتأكيد كلمة المرور لا يتطابقان");
+                return new BaseResponse<bool>(false, "كلمة المرور وتأكيد كلمة المرور لا يتطابقان");
 
             var user = await _userManager.FindByEmailAsync(resetPassword.Email);
-            if (user == null) throw new Exception("لم يتم العثور على بريدك الإلكتروني");
+            if (user == null) return new BaseResponse<bool>(false, "لم يتم العثور على بريدك الإلكتروني");
 
             var result = await _userManager.ResetPasswordAsync(user, resetPassword.Token, resetPassword.NewPassword);
-            if (!result.Succeeded) throw new Exception("فشلت إعادة تعيين كلمة المرور");
+             if (!result.Succeeded) return new BaseResponse<bool>(false, "فشلت إعادة تعيين كلمة المرور");
 
-            return true;
+            return new BaseResponse<bool>(true, "تم تحديث كلمة المرور بنجاح");
         }
 
-        public async Task<bool> VerifyOTPAsync(VerifyCodeDto verify)
+        public async Task<BaseResponse<bool>> VerifyOTPAsync(VerifyCodeDto verify)
         {
-            var user = await _userManager.FindByEmailAsync(verify.Email);
-            if (user == null) throw new Exception($"Email '{verify.Email}' is not found.");
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(verify.Email);
+                if (user == null)
+                    return new BaseResponse<bool>(false, $"Email '{verify.Email}' is not found.");
 
-            var cachedOtp = _memoryCache.Get(verify.Email)?.ToString();
-            if (string.IsNullOrEmpty(cachedOtp)) throw new Exception("لم يتم العثور على الرمز أو انتهت صلاحيته.");
+                var cachedOtp = _memoryCache.Get(verify.Email)?.ToString();
+                if (string.IsNullOrEmpty(cachedOtp))
+                    return new BaseResponse<bool>(false, "لم يتم العثور على الرمز أو انتهت صلاحيته. يرجى طلب رمز جديد.");
 
-            if (verify.CodeOTP != cachedOtp) throw new Exception("الرمز غير صحيح");
+                if (!string.Equals(verify.CodeOTP, cachedOtp, StringComparison.OrdinalIgnoreCase))
+                    return new BaseResponse<bool>(false, "الرمز غير صحيح. تأكد من إدخاله بشكل صحيح.");
 
-            return true;
-        
-          }
+                // حذف الكود بعد التحقق الناجح
+                _memoryCache.Remove(verify.Email);
+
+                return new BaseResponse<bool>(true, "تم التحقق من الرمز بنجاح.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in VerifyOTPAsync: {ex.Message}");
+                return new BaseResponse<bool>(false, "حدث خطأ في السيرفر، حاول مرة أخرى لاحقًا.");
+            }
+
+        }
     }
 }

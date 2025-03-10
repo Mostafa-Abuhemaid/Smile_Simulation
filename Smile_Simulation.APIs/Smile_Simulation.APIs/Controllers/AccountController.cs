@@ -25,106 +25,48 @@ namespace Smile_Simulation.APIs.Controllers
             _accountService = accountService;
         }
         [HttpPost("Register/Patient")]
-        public async Task<IActionResult> RegisterForPatient([FromForm]PatientDto patientDto)
+        public async Task<ActionResult<BaseResponse<TokenForRegister>>> RegisterForPatient([FromForm]GetPatientDto patientDto)
         {
-            try
-            {
+          
                 var result = await _accountService.RegisterForPatientAsync(patientDto);
-                var response = new BaseResponse<TokenForRegister>(true, "تم انشاء الحساب بنجاح", result);
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                
-                var errorResponse = new BaseResponse<object>(false, ex.Message);
-                return BadRequest(errorResponse);
-            }
+                return result.Success ? Ok(result) : BadRequest(result);
 
-        }
+          }
         [HttpPost("Register/Doctor")]
-        public async Task<IActionResult> RegisterForDoctor([FromForm] DoctorDto doctorDto)
+        public async Task<ActionResult<BaseResponse<TokenForRegister>>> RegisterForDoctor([FromForm] GetDoctorDto doctorDto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-            try
-            {
+          
                 var result = await _accountService.RegisterForDoctorAsync(doctorDto);
-                var response = new BaseResponse<TokenForRegister>(true, "تم انشاء الحساب بنجاح", result);
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                var errorResponse = new BaseResponse<object>(false, ex.Message);
-                return BadRequest(errorResponse);
-            }
+                return result.Success ? Ok(result) : BadRequest(result);
 
-        }
+         }
         [HttpPost("Login")]
-        public async Task<IActionResult> Login( LoginDto loginDto)
+        public async Task<ActionResult<BaseResponse<TokenDTO>>> Login(LoginDto loginDto)
         {
-            
-            try
-            {
-                var result = await _accountService.LoginAsync(loginDto);
-                var response = new BaseResponse<TokenDTO>(true, "تم تسجيل الدخول بنجاح", result);
-                return Ok(response);
-
-             
-            }
-            catch (Exception ex)
-            {
-                  var errorResponse = new BaseResponse<object>(false, ex.Message);
-                  return BadRequest(errorResponse);
-            }
+            var result = await _accountService.LoginAsync(loginDto);
+            return result.Success ? Ok(result) : BadRequest(result);
 
         }
         [HttpPost("ForgetPassword")]
-        public async Task<ActionResult> ForgetPassword([FromBody] ForgotDto request)
+        public async Task<ActionResult<BaseResponse<ForgotPasswordDTO>>> ForgetPassword([FromBody] ForgotDto request)
         {
-            try
-            {
-                var result = await _accountService.ForgotPasswordAsync(request);
-                var response = new BaseResponse<ForgotPasswordDTO>(true, "تحقق من بريدك الاكتروني", result);
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                var errorResponse = new BaseResponse<object>(false, ex.Message);
-                return BadRequest(errorResponse);
-            }
-
+          
+             var result = await _accountService.ForgotPasswordAsync(request);
+            return result.Success ? Ok(result) : BadRequest(result);
         }
 
         [HttpPost("VerifyOTP")]
-        public async Task<ActionResult> VerifyOTP([FromBody] VerifyCodeDto verify)
+        public async Task<ActionResult<BaseResponse<bool>>> VerifyOTP([FromBody] VerifyCodeDto verify)
         {
-
-            try
-            {
+  
                 var result = await _accountService.VerifyOTPAsync(verify);
-                var response = new BaseResponse<ForgotPasswordDTO>(true, "تم التحقق من الرمز بنجاح");
-                return Ok(response);
+                return result.Success ? Ok(result) : BadRequest(result);
             }
-            catch (Exception ex)
-            {
-                var errorResponse = new BaseResponse<object>(false, ex.Message);
-                return BadRequest(errorResponse);
-            }
-        }
         [HttpPut("ResetPassword")]
         public async Task<ActionResult> ResetPassword(ResetPasswordDto resetPassword)
-        {
-            try
-            {
+        {   
                 var result = await _accountService.ResetPasswordAsync(resetPassword);
-                var response = new BaseResponse<ForgotPasswordDTO>(true, "تم تحديث كلمة المرور بنجاح");
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                var errorResponse = new BaseResponse<object>(false, ex.Message);
-                return BadRequest(errorResponse);
-            }
+                return result.Success ? Ok(result) : BadRequest(result);
         }
     }
 }
