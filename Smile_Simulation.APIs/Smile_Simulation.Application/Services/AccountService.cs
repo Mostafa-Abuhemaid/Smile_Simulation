@@ -72,6 +72,7 @@ namespace Smile_Simulation.Application.Services
                 var Url = $"{_configuration["BaseURL"]}/Images/Product/{user.Image}";
                 var res = new TokenDTO
                 {
+                    UserId=user.Id,
                     Email = user.Email,
                     FullName = user.FullName,
                     gender = user.gender,

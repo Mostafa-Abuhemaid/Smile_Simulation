@@ -11,7 +11,7 @@ namespace Smile_Simulation.Domain.DTOs.TokenDto
 {
     public class TokenDTO
     {
-
+        public string UserId {  get; set; }
         public string FullName { get; set; }
 
         public string Email { get; set; }
