@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Smile_Simulation.Infrastructure.Data;
 
@@ -11,9 +12,11 @@ using Smile_Simulation.Infrastructure.Data;
 namespace Smile_Simulation.Infrastructure.Migrations
 {
     [DbContext(typeof(SmileDbContext))]
-    partial class SmileDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250310230627_Add Addess and birthday")]
+    partial class AddAddessandbirthday
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

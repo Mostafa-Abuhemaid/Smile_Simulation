@@ -214,5 +214,15 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Smile_Simulation.APIs.Controllers.UserController",
+    "Method": "GetUserDetils",
+    "RelativePath": "api/User/GetUserDetils",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

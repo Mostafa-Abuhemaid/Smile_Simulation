@@ -27,7 +27,7 @@ namespace Smile_Simulation.Infrastructure.Files
         public static void DeleteFile(string fileName, string folderName)
         {
             // 1. get file path
-            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\Images", folderName, fileName);
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", folderName, fileName);
             // 2. check if it not exist
             if (File.Exists(filePath))
                 File.Delete(filePath);

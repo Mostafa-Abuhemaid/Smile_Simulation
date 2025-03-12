@@ -41,6 +41,8 @@ namespace Smile_Simulation.APIs
             // Register services
             builder.Services.AddScoped<IAccountService, AccountService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
+            builder.Services.AddScoped<IUserService,UserService>();
+
             builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.Configure<EmailDto>(configuration.GetSection("MailSettings"));
             builder.Services.AddTransient<IEmailService, EmailService>();

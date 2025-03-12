@@ -1,5 +1,6 @@
 ﻿using Smile_Simulation.Domain.DTOs.DoctorDto;
 using Smile_Simulation.Domain.DTOs.PatientDto;
+using Smile_Simulation.Domain.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace Smile_Simulation.Domain.Interfaces.Services
 {
     public interface IUserService
     {
-        Task<SendDoctorDTO> GetDoctorDetailsAsync(string DoctorId);
-        Task<SendPatientDTO> GetPatientDetailsAsync(string PatientId);
+        Task<BaseResponse<SendDoctorDTO>>GetDoctorDetailsAsync(string DoctorId,string role);
+        Task<BaseResponse< SendPatientDTO>> GetPatientDetailsAsync(string PatientId,string role);
     }
 }

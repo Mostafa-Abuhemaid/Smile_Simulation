@@ -19,6 +19,7 @@ namespace Smile_Simulation.Domain.DTOs.DoctorDto
         public int? Experience { get; set; } = 0;
         public string? Qualification { get; set; }
         public string? Specialization { get; set; }
+        public string role { get; set; }
         public string? Address { get; set; } = null;
         public DateOnly? BirthDay { get; set; } = null;
                     

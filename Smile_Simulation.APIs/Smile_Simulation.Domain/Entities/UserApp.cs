@@ -13,5 +13,9 @@ namespace Smile_Simulation.Domain.Entities
         public string FullName { get; set; }
         public string? Image { get; set; }
         public Gender gender { get; set; }
+        public string? Address {  get; set; }
+        public DateOnly? BirthDay { get; set; }
+
+
     }
 }

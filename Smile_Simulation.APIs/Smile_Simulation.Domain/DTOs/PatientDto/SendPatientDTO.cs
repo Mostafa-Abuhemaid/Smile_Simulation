@@ -20,7 +20,8 @@ namespace Smile_Simulation.Domain.DTOs.PatientDto
     
         public string Image { get; set; }
        
-        public string gender { get; set; }
+        public Gender gender { get; set; }
+        public string role { get; set; }
         public string? Address { get; set; } = null;
         public DateOnly? BirthDay { get; set; } = null;
     }

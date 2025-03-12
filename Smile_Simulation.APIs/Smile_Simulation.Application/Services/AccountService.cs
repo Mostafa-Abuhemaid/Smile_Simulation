@@ -61,27 +61,27 @@ namespace Smile_Simulation.Application.Services
 
         public async Task<BaseResponse<TokenDTO>> LoginAsync(LoginDto loginDto)
         {
-            var user = await _userManager.FindByEmailAsync(loginDto.Email);
-            if (user == null) return new BaseResponse<TokenDTO>(false, "البريد الاكتروني غير صحيح");
+           
+                var user = await _userManager.FindByEmailAsync(loginDto.Email);
+                if (user == null) return new BaseResponse<TokenDTO>(false, "البريد الاكتروني غير صحيح");
 
-            var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+                var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
 
-            if (!result.Succeeded) return new BaseResponse<TokenDTO>(false, "كلمة السر غير صحيحة");
+                if (!result.Succeeded) return new BaseResponse<TokenDTO>(false, "كلمة السر غير صحيحة");
 
-            var Url = $"{_configuration["BaseURL"]}/Images/Product/{user.Image}";
-            var res = new TokenDTO
-            {
-                Email = user.Email,
-                FullName = user.FullName,
-                gender = user.gender,
-                Image = Url,
-                Token = await _tokenService.GenerateTokenAsync(user, _userManager)
-            };
+                var Url = $"{_configuration["BaseURL"]}/Images/Product/{user.Image}";
+                var res = new TokenDTO
+                {
+                    Email = user.Email,
+                    FullName = user.FullName,
+                    gender = user.gender,
+                    Image = Url,
+                    Token = await _tokenService.GenerateTokenAsync(user, _userManager)
+                };
 
-            return new BaseResponse<TokenDTO>(true, "تم تسجيل الدخول بنجاح", res);
+                return new BaseResponse<TokenDTO>(true, "تم تسجيل الدخول بنجاح", res);
+          
         }
-    
-    
 
         public async Task<BaseResponse<TokenForRegister>> RegisterForDoctorAsync(GetDoctorDto doctorDto)
         {

@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Smile_Simulation.Domain\Smile_Simulation.Domain.csproj" />
+    <ProjectReference Include="..\Smile_Simulation.Infrastructure\Smile_Simulation.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

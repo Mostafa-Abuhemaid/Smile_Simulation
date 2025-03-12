@@ -13,8 +13,8 @@ namespace Smile_Simulation.Domain.Interfaces.Services
 {
     public interface IAccountService
     {
-        public Task<BaseResponse<TokenForRegister>> RegisterForPatientAsync(GetPatientDto patientDTO);
-        public Task<BaseResponse<TokenForRegister>> RegisterForDoctorAsync(GetDoctorDto doctorDto);
+       Task<BaseResponse<TokenForRegister>> RegisterForPatientAsync(GetPatientDto patientDTO);
+        Task<BaseResponse<TokenForRegister>> RegisterForDoctorAsync(GetDoctorDto doctorDto);
         Task<BaseResponse<TokenDTO>> LoginAsync(LoginDto loginDto);
         Task<BaseResponse<ForgotPasswordDTO>> ForgotPasswordAsync(ForgotDto request);
         Task<BaseResponse<bool>> VerifyOTPAsync(VerifyCodeDto verify);

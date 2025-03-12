@@ -124,6 +124,9 @@
             "projectReferences": {
               "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj": {
                 "projectPath": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Domain\\Smile_Simulation.Domain.csproj"
+              },
+              "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\Smile_Simulation.Infrastructure.csproj": {
+                "projectPath": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.Infrastructure\\Smile_Simulation.Infrastructure.csproj"
               }
             }
           }
