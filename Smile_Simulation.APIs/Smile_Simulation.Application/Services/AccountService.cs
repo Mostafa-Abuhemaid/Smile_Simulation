@@ -109,6 +109,7 @@ namespace Smile_Simulation.Application.Services
 
             var doctor = new Doctor
             {
+                
                 FullName=doctorDto.FullName,
                 UserName=doctorDto.Email,
                 Email=doctorDto.Email,

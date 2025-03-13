@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Smile_Simulation.Application.Services;
+using Smile_Simulation.Domain.DTOs.UserDto;
 using Smile_Simulation.Domain.Entities;
 using Smile_Simulation.Domain.Enums;
 using Smile_Simulation.Domain.Interfaces.Services;
@@ -44,5 +45,26 @@ namespace Smile_Simulation.APIs.Controllers
                 return result.Success ? Ok(result) : BadRequest(result);
             }
         }
+        [Authorize]
+        [HttpPut("EditUserDetils")]
+        public async Task<IActionResult> EditUserDetils([FromForm]EditeUserDto userDto)
+        {
+            var role = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+            var userId = User?.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null)
+            {
+                return Unauthorized("User not authenticated.");
+            }
+           if (role == Roles.Doctor.ToString())
+           {
+               var result = await _userService.EditDoctorDetailsAsync(userDto);
+               return result.Success ? Ok(result) : BadRequest(result);
+           }
+           else
+           {
+               var result = await _userService.EditPatientDetailsAsync(userDto);
+               return result.Success ? Ok(result) : BadRequest(result);
+           }
+        } 
     }
 }

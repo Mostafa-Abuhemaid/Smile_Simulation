@@ -6,10 +6,12 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Smile_Simulation.Domain.DTOs.DoctorDto;
 using Smile_Simulation.Domain.DTOs.PatientDto;
+using Smile_Simulation.Domain.DTOs.UserDto;
 using Smile_Simulation.Domain.Entities;
 using Smile_Simulation.Domain.Interfaces.Services;
 using Smile_Simulation.Domain.Response;
 using Smile_Simulation.Infrastructure.Data;
+using Smile_Simulation.Infrastructure.Files;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +36,47 @@ namespace Smile_Simulation.Application.Services
             _DbContext = dbContext;
         }
 
+        public async Task<BaseResponse<SendDoctorDTO>> EditDoctorDetailsAsync(EditeUserDto userDto)
+        {
+            var Doc = await _DbContext.Doctors.FirstOrDefaultAsync(d => d.Id == userDto.Id);
+            if (Doc == null)
+                return new BaseResponse<SendDoctorDTO>(false, "المستخدم غير موجود");
+
+          
+            Doc.Image = Files.UploadFile(userDto.Image, "Doctor\\Profile");
+            Files.DeleteFile(Doc.Image, "Doctor\\Profile");
+            Doc.FullName = userDto.FullName;
+            Doc.gender = userDto.Gender;
+            Doc.Experience = userDto.Experience;
+            Doc.Qualification = userDto.Qualification;
+            Doc.Specialization = userDto.Specialization;
+            Doc.Address = userDto.Address;
+            Doc.BirthDay = userDto.BirthDay;
+            await _DbContext.SaveChangesAsync();
+
+            return new BaseResponse<SendDoctorDTO>(true, "تم تعديل البيانات بنجاح" );
+
+        }
+
+        public async Task<BaseResponse<SendPatientDTO>> EditPatientDetailsAsync(EditeUserDto userDto)
+        {
+            var patient = await _DbContext.Patients.FirstOrDefaultAsync(d => d.Id == userDto.Id);
+            if (patient == null)
+                return new BaseResponse<SendPatientDTO>(false, "المستخدم غير موجود");
+
+
+           patient.Image = Files.UploadFile(userDto.Image, "Patient");
+           Files.DeleteFile(patient.Image, "Patient");
+           patient.FullName = userDto.FullName;
+           patient.gender = userDto.Gender;
+            patient.Age = userDto.age??0;
+           patient.Address = userDto.Address;
+           patient.BirthDay = userDto.BirthDay;
+            await _DbContext.SaveChangesAsync();
+
+            return new BaseResponse<SendPatientDTO>(true, "  تم تعديل البيانات بنجاح");
+        }
+
         public async Task<BaseResponse<SendDoctorDTO>> GetDoctorDetailsAsync(string DoctorId,string role)
         {
             
@@ -44,6 +87,7 @@ namespace Smile_Simulation.Application.Services
                 var Url = $"{_configuration["BaseURL"]}/Images/Doctor/Profile{Doc.Image}";
                 var DocDTO = new SendDoctorDTO
                 {
+                    Id=DoctorId,
                     Email = Doc.Email,
                     Image = Doc.Image != null ? $"{_configuration["BaseURL"]}/Images/Doctor/Profile/{Doc.Image}" : null,
                     FullName = Doc.FullName,
@@ -69,6 +113,7 @@ namespace Smile_Simulation.Application.Services
             
             var PatientDTO = new SendPatientDTO
             {
+                Id= PatientId,
                 Email = patient.Email,
                 Image = patient.Image != null ? $"{_configuration["BaseURL"]}/Images/Patient/{patient.Image}" : null,
                 FullName = patient.FullName,

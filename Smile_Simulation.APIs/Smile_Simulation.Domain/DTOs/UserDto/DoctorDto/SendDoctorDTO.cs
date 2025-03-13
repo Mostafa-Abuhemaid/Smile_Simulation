@@ -7,22 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Smile_Simulation.Domain.DTOs.PatientDto
+namespace Smile_Simulation.Domain.DTOs.DoctorDto
 {
-    public class SendPatientDTO
+    public class SendDoctorDTO
     {
-        
-        public string FullName { get; set; }
-
+        public string Id { get; set; }
+        public string FullName { get; set; }      
         public string Email { get; set; }
-
-        public int Age { get; set; }
-    
-        public string Image { get; set; }
-       
-        public Gender gender { get; set; }
+        public string Image { get; set; }     
+        public Gender Gender { get; set; }
+        public int? Experience { get; set; } = 0;
+        public string? Qualification { get; set; }
+        public string? Specialization { get; set; }
         public string role { get; set; }
         public string? Address { get; set; } = null;
         public DateOnly? BirthDay { get; set; } = null;
+                    
     }
 }
