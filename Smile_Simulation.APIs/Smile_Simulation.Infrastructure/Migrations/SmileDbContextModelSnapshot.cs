@@ -155,6 +155,62 @@ namespace Smile_Simulation.Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Smile_Simulation.Domain.Entities.Advice", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DescriptionOfLink")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("Advices");
+                });
+
+            modelBuilder.Entity("Smile_Simulation.Domain.Entities.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("Smile_Simulation.Domain.Entities.UserApp", b =>
                 {
                     b.Property<string>("Id")
@@ -319,6 +375,17 @@ namespace Smile_Simulation.Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Smile_Simulation.Domain.Entities.Advice", b =>
+                {
+                    b.HasOne("Smile_Simulation.Domain.Entities.Category", "Category")
+                        .WithMany("advices")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
             modelBuilder.Entity("Smile_Simulation.Domain.Entities.Doctor", b =>
                 {
                     b.HasOne("Smile_Simulation.Domain.Entities.UserApp", null)
@@ -335,6 +402,11 @@ namespace Smile_Simulation.Infrastructure.Migrations
                         .HasForeignKey("Smile_Simulation.Domain.Entities.Patient", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Smile_Simulation.Domain.Entities.Category", b =>
+                {
+                    b.Navigation("advices");
                 });
 #pragma warning restore 612, 618
         }

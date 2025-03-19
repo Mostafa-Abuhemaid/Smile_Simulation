@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Smile_Simulation.Domain.DTOs.CategoryDto;
 using Smile_Simulation.Domain.DTOs.DoctorDto;
 using Smile_Simulation.Domain.DTOs.PatientDto;
 using Smile_Simulation.Domain.Entities;
@@ -40,5 +41,7 @@ namespace Smile_Simulation.Application.Mapping
        .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address))
        .ForMember(dest => dest.BirthDay, opt => opt.MapFrom(src => src.BirthDay));
         }
+        ///////////////////////////////
+      //  CreateMap<Category, GetCategoryDTO>();
     }
 }

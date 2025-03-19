@@ -84,7 +84,7 @@ namespace Smile_Simulation.Application.Services
                 if (Doc == null)
                     return new BaseResponse<SendDoctorDTO>(false, "المستخدم غير موجود");
 
-                var Url = $"{_configuration["BaseURL"]}/Images/Doctor/Profile{Doc.Image}";
+                var Url = $"{_configuration["BaseURL"]}/Images/Doctor/Profile/{Doc.Image}";
                 var DocDTO = new SendDoctorDTO
                 {
                     Id=DoctorId,

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Smile_Simulation.Application.Mapping;
 using Smile_Simulation.Application.Services;
 using Smile_Simulation.Domain.DTOs.EmailDto;
 using Smile_Simulation.Domain.Entities;
@@ -39,10 +40,11 @@ namespace Smile_Simulation.APIs
                 .AddDefaultTokenProviders();
 
             // Register services
+             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<IAccountService, AccountService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IUserService,UserService>();
-
+            
             builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.Configure<EmailDto>(configuration.GetSection("MailSettings"));
             builder.Services.AddTransient<IEmailService, EmailService>();
@@ -92,6 +94,7 @@ namespace Smile_Simulation.APIs
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
+                app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }

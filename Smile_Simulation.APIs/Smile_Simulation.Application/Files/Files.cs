@@ -26,11 +26,23 @@ namespace Smile_Simulation.Infrastructure.Files
         }
         public static void DeleteFile(string fileName, string folderName)
         {
-            // 1. get file path
+            if (string.IsNullOrWhiteSpace(fileName) || string.IsNullOrWhiteSpace(folderName))
+            {
+                throw new ArgumentException("اسم الملف أو اسم المجلد غير صالح");
+            }
+
+           
+            fileName = Path.GetFileName(fileName);
+
+            
             string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", folderName, fileName);
-            // 2. check if it not exist
+
+            
             if (File.Exists(filePath))
+            {
                 File.Delete(filePath);
+            }
         }
+
     }
 }

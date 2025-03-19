@@ -14,6 +14,8 @@ namespace Smile_Simulation.Infrastructure.Data
     {
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet <Advice> Advices { get; set; }
         public SmileDbContext(DbContextOptions<SmileDbContext> options) : base(options)
         {
 
