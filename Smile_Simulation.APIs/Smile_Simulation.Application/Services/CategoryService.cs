@@ -112,7 +112,7 @@ namespace Smile_Simulation.Application.Services
         {
             try
             {
-                var category = await _dbContext.Categories.FindAsync(id);
+                var category = await _dbContext.Categories.Include(A=>A.advices).FirstOrDefaultAsync(C=>C.Id == id);
                 if (category == null)
                 {
                     return new BaseResponse<GetCategoryDTO>(false, "القسم غير موجود.");

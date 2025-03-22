@@ -27,6 +27,12 @@ namespace Smile_Simulation.Infrastructure.Data
             modelBuilder.Entity<UserApp>().ToTable("Users");
             modelBuilder.Entity<Patient>().ToTable("Patients");
             modelBuilder.Entity<Doctor>().ToTable("Doctors");
+
+            modelBuilder.Entity<Category>()
+              .HasMany(c => c.advices) 
+              .WithOne(a => a.Category) 
+              .HasForeignKey(a => a.CategoryId) 
+              .OnDelete(DeleteBehavior.Cascade);
         }
 
     }

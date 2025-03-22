@@ -187,7 +187,7 @@ namespace Smile_Simulation.Infrastructure.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Advices");
+                    b.ToTable("Advices", (string)null);
                 });
 
             modelBuilder.Entity("Smile_Simulation.Domain.Entities.Category", b =>
@@ -208,7 +208,7 @@ namespace Smile_Simulation.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("Smile_Simulation.Domain.Entities.UserApp", b =>

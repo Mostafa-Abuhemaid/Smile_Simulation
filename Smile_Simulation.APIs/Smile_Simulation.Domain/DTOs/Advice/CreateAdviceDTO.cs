@@ -1,19 +1,20 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using Smile_Simulation.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Smile_Simulation.Domain.Entities
+namespace Smile_Simulation.Domain.DTOs.Advice
 {
-    public class Advice : BaseEntity<int>
+    public class CreateAdviceDTO
     {
-
-        public string? Image { get; set; }
+        public IFormFile? Image { get; set; }
 
         [Required(ErrorMessage = "The Title is requred")]
-       
+
         public string Title { get; set; }
 
         [Required(ErrorMessage = "The Description is requred")]
@@ -24,8 +25,6 @@ namespace Smile_Simulation.Domain.Entities
         public string? DescriptionOfLink { get; set; }
 
         public int CategoryId { get; set; }
-
-        public Category Category { get; set; }
 
     }
 }
