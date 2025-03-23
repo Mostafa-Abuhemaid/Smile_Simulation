@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Smile_Simulation.Domain.DTOs.Advice;
+using Smile_Simulation.Domain.Interfaces;
 
 namespace Smile_Simulation.APIs.Controllers
 {
@@ -7,5 +9,42 @@ namespace Smile_Simulation.APIs.Controllers
     [ApiController]
     public class AdviceController : ControllerBase
     {
+        private readonly IAdviceService _adviceService;
+        public AdviceController(IAdviceService adviceService)
+        {
+            _adviceService = adviceService;
+        }
+
+
+        [HttpGet("GetAllAdviceAsync")]
+        public async Task<IActionResult> GetAllAdviceAsync()
+        {
+            var cat = await _adviceService.GetAllAdviceAsync();
+            return cat.Success ? Ok(cat) : NotFound(cat);
+        }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetAdviceByIdAsync(int id)
+        {
+            var cat = await _adviceService.GetAdviceByIdAsync(id);
+            return cat.Success ? Ok(cat) : NotFound(cat);
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAdviceAsync(int id)
+        {
+            var cat = await _adviceService.DeleteAdviceAsync(id);
+            return cat.Success ? Ok(cat) : NotFound(cat);
+        }
+        [HttpPut("UpdateCategory/{id}")]
+        public async Task<IActionResult> UpdateAdviceAsync(int id , CreateAdviceDTO createAdviceDTO)
+        {
+            var cat = await _adviceService.UpdateAdviceAsync(id,createAdviceDTO);
+            return cat.Success ? Ok(cat) : NotFound(cat);
+        }
+        [HttpPost()]
+        public async Task<IActionResult> CreateAdviceAsync(CreateAdviceDTO createAdviceDTO)
+        {
+            var cat = await _adviceService.CreateAdviceAsync(createAdviceDTO);
+            return cat.Success ? Ok(cat) : NotFound(cat);
+        }
     }
 }

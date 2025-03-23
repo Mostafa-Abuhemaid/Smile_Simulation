@@ -19,7 +19,7 @@ namespace Smile_Simulation.Domain.Entities
         [Required(ErrorMessage = "The Description is requred")]
         public string Description { get; set; }
 
-        public string? VidoeLink { get; set; }
+        public string? Link { get; set; }
 
         public string? DescriptionOfLink { get; set; }
 

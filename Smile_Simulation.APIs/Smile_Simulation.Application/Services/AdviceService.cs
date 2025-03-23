@@ -40,7 +40,7 @@ namespace Smile_Simulation.Application.Services
                 advice.Image = $"{_configuration["BaseURL"]}/Advice/{imagePath}";
 
             }
-            advice.VidoeLink = adviceDto.VidoeLink ?? advice.VidoeLink;
+            advice.Link = adviceDto.Link ?? advice.Link;
             advice.DescriptionOfLink = adviceDto.DescriptionOfLink ?? advice.DescriptionOfLink;
 
 
@@ -76,7 +76,7 @@ namespace Smile_Simulation.Application.Services
                     Image = $"{_configuration["BaseURL"]}/Advice/{advice.Image}",
                     Title = advice.Title,
                     Description= advice.Description,
-                    VidoeLink= advice.VidoeLink,
+                    Link = advice.Link,
                     DescriptionOfLink= advice.DescriptionOfLink,
                     CategoryId= advice.CategoryId,
                     Category= advice.Category.Name
@@ -94,7 +94,7 @@ namespace Smile_Simulation.Application.Services
                 Image = $"{_configuration["BaseURL"]}/Advice/{advice.Image}",
                 Title = advice.Title,
                 Description = advice.Description,
-                VidoeLink = advice.VidoeLink,
+                Link = advice.Link,
                 DescriptionOfLink = advice.DescriptionOfLink,
                 CategoryId = advice.CategoryId,
                 Category = advice.Category.Name
@@ -130,7 +130,7 @@ namespace Smile_Simulation.Application.Services
             }
 
             
-            advice.VidoeLink = adviceDto.VidoeLink ?? advice.VidoeLink;
+            advice.Link = adviceDto.Link ?? advice.Link;
             advice.DescriptionOfLink = adviceDto.DescriptionOfLink ?? advice.DescriptionOfLink;
 
 

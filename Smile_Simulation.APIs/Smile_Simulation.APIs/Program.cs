@@ -7,6 +7,7 @@ using Smile_Simulation.Application.Mapping;
 using Smile_Simulation.Application.Services;
 using Smile_Simulation.Domain.DTOs.EmailDto;
 using Smile_Simulation.Domain.Entities;
+using Smile_Simulation.Domain.Interfaces;
 using Smile_Simulation.Domain.Interfaces.Services;
 using Smile_Simulation.Infrastructure.Data;
 using System;
@@ -41,6 +42,7 @@ namespace Smile_Simulation.APIs
 
             // Register services
              builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<IAdviceService, AdviceService>();
             builder.Services.AddScoped<IAccountService, AccountService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IUserService,UserService>();

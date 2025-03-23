@@ -15,7 +15,7 @@ namespace Smile_Simulation.Domain.DTOs.Advice
         public string Title { get; set; }
         public string Description { get; set; }
 
-        public string? VidoeLink { get; set; }
+        public string? Link { get; set; }
 
         public string? DescriptionOfLink { get; set; }
 
