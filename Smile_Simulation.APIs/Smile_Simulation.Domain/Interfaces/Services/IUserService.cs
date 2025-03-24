@@ -14,8 +14,8 @@ namespace Smile_Simulation.Domain.Interfaces.Services
     {
         Task<BaseResponse<SendDoctorDTO>>GetDoctorDetailsAsync(string DoctorId,string role);
         Task<BaseResponse<SendPatientDTO>> GetPatientDetailsAsync(string PatientId,string role);
-        Task<BaseResponse<SendDoctorDTO>> EditDoctorDetailsAsync(EditeUserDto userDto);
-        Task<BaseResponse<SendPatientDTO>> EditPatientDetailsAsync(EditeUserDto userDto);
+        Task<BaseResponse<SendDoctorDTO>> EditDoctorDetailsAsync(string userId,EditeUserDto userDto);
+        Task<BaseResponse<SendPatientDTO>> EditPatientDetailsAsync(string userId, EditeUserDto userDto);
 
     }
 }

@@ -25,7 +25,6 @@
     <Folder Include="wwwroot\Doctor\Profile\" />
     <Folder Include="wwwroot\Category\" />
     <Folder Include="wwwroot\Advice\" />
-    <Folder Include="wwwroot\Patient\" />
   </ItemGroup>
 
 </Project>

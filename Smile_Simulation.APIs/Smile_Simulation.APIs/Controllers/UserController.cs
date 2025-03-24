@@ -57,12 +57,12 @@ namespace Smile_Simulation.APIs.Controllers
             }
            if (role == Roles.Doctor.ToString())
            {
-               var result = await _userService.EditDoctorDetailsAsync(userDto);
+               var result = await _userService.EditDoctorDetailsAsync(userId,userDto);
                return result.Success ? Ok(result) : BadRequest(result);
            }
            else
            {
-               var result = await _userService.EditPatientDetailsAsync(userDto);
+               var result = await _userService.EditPatientDetailsAsync(userId, userDto);
                return result.Success ? Ok(result) : BadRequest(result);
            }
         } 

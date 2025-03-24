@@ -291,7 +291,7 @@
   {
     "ContainingType": "Smile_Simulation.APIs.Controllers.AdviceController",
     "Method": "GetAllAdviceAsync",
-    "RelativePath": "api/Advice/GetAllAdviceAsync",
+    "RelativePath": "api/Advice/GetAllAdvices",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -301,7 +301,7 @@
   {
     "ContainingType": "Smile_Simulation.APIs.Controllers.AdviceController",
     "Method": "UpdateAdviceAsync",
-    "RelativePath": "api/Advice/UpdateCategory/{id}",
+    "RelativePath": "api/Advice/UpdateAdvice/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -345,9 +345,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Smile_Simulation.APIs.Controllers.CategoryController",
+    "ContainingType": "Smile_Simulation.APIs.Controllers.AdviceCategoryController",
     "Method": "GetCategoryByIdAsync",
-    "RelativePath": "api/Category/{id}",
+    "RelativePath": "api/AdviceCategory/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -361,9 +361,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Smile_Simulation.APIs.Controllers.CategoryController",
+    "ContainingType": "Smile_Simulation.APIs.Controllers.AdviceCategoryController",
     "Method": "DeleteCategoryAsync",
-    "RelativePath": "api/Category/{id}",
+    "RelativePath": "api/AdviceCategory/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -377,9 +377,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Smile_Simulation.APIs.Controllers.CategoryController",
+    "ContainingType": "Smile_Simulation.APIs.Controllers.AdviceCategoryController",
     "Method": "AddCategoryAsync",
-    "RelativePath": "api/Category/AddCategory",
+    "RelativePath": "api/AdviceCategory/Add_Advice_Category",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -398,9 +398,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Smile_Simulation.APIs.Controllers.CategoryController",
+    "ContainingType": "Smile_Simulation.APIs.Controllers.AdviceCategoryController",
     "Method": "GetAllCategoryAsync",
-    "RelativePath": "api/Category/GetAllCategory",
+    "RelativePath": "api/AdviceCategory/GetAll_Advice_Category",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -408,9 +408,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Smile_Simulation.APIs.Controllers.CategoryController",
+    "ContainingType": "Smile_Simulation.APIs.Controllers.AdviceCategoryController",
     "Method": "UpdateCategoryAsync",
-    "RelativePath": "api/Category/UpdateCategory/{id}",
+    "RelativePath": "api/AdviceCategory/Update_Advice_Category/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -441,11 +441,6 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.String",
-        "IsRequired": false
-      },
       {
         "Name": "FullName",
         "Type": "System.String",

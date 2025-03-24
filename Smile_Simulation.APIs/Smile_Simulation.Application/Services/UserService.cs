@@ -36,15 +36,22 @@ namespace Smile_Simulation.Application.Services
             _DbContext = dbContext;
         }
 
-        public async Task<BaseResponse<SendDoctorDTO>> EditDoctorDetailsAsync(EditeUserDto userDto)
+        public async Task<BaseResponse<SendDoctorDTO>> EditDoctorDetailsAsync(string userId,EditeUserDto userDto)
         {
-            var Doc = await _DbContext.Doctors.FirstOrDefaultAsync(d => d.Id == userDto.Id);
+            var Doc = await _DbContext.Doctors.FirstOrDefaultAsync(d => d.Id == userId);
             if (Doc == null)
                 return new BaseResponse<SendDoctorDTO>(false, "المستخدم غير موجود");
+       
+            if (userDto.Image != null)
+            {
+                if (!string.IsNullOrEmpty(Doc.Image))
+                {
+                    Files.DeleteFile(Doc.Image, "Advice");
+                }
 
-          
-            Doc.Image = Files.UploadFile(userDto.Image, "Doctor\\Profile");
-            Files.DeleteFile(Doc.Image, "Doctor\\Profile");
+                Doc.Image = Files.UploadFile(userDto.Image, "Advice");
+            }
+
             Doc.FullName = userDto.FullName;
             Doc.gender = userDto.Gender;
             Doc.Experience = userDto.Experience;
@@ -58,18 +65,25 @@ namespace Smile_Simulation.Application.Services
 
         }
 
-        public async Task<BaseResponse<SendPatientDTO>> EditPatientDetailsAsync(EditeUserDto userDto)
+        public async Task<BaseResponse<SendPatientDTO>> EditPatientDetailsAsync(string userId, EditeUserDto userDto)
         {
-            var patient = await _DbContext.Patients.FirstOrDefaultAsync(d => d.Id == userDto.Id);
+            var patient = await _DbContext.Patients.FirstOrDefaultAsync(d => d.Id == userId);
             if (patient == null)
                 return new BaseResponse<SendPatientDTO>(false, "المستخدم غير موجود");
 
+           
+            if (userDto.Image != null)
+            {
+                if (!string.IsNullOrEmpty(patient.Image))
+                {
+                    Files.DeleteFile(patient.Image, "Advice");
+                }
 
-           patient.Image = Files.UploadFile(userDto.Image, "Patient");
-           Files.DeleteFile(patient.Image, "Patient");
-           patient.FullName = userDto.FullName;
+                patient.Image = Files.UploadFile(userDto.Image, "Patient");
+            }
+            patient.FullName = userDto.FullName;
            patient.gender = userDto.Gender;
-            patient.Age = userDto.age??0;
+           patient.Age = userDto.age??0;
            patient.Address = userDto.Address;
            patient.BirthDay = userDto.BirthDay;
             await _DbContext.SaveChangesAsync();
@@ -83,13 +97,12 @@ namespace Smile_Simulation.Application.Services
                 var Doc = await _DbContext.Doctors.FirstOrDefaultAsync(d => d.Id == DoctorId);
                 if (Doc == null)
                     return new BaseResponse<SendDoctorDTO>(false, "المستخدم غير موجود");
-
-                var Url = $"{_configuration["BaseURL"]}/Images/Doctor/Profile/{Doc.Image}";
+            var Url = $"{_configuration["BaseURL"]}/Images/Doctor/Profile/{Doc.Image}";
                 var DocDTO = new SendDoctorDTO
                 {
                     Id=DoctorId,
                     Email = Doc.Email,
-                    Image = Doc.Image != null ? $"{_configuration["BaseURL"]}/Images/Doctor/Profile/{Doc.Image}" : null,
+                    Image = Doc.Image != null ? $"{_configuration["BaseURL"]}/Doctor/Profile/{Doc.Image}" : null,
                     FullName = Doc.FullName,
                     Gender = Doc.gender,
                     Experience = Doc.Experience,
@@ -115,7 +128,7 @@ namespace Smile_Simulation.Application.Services
             {
                 Id= PatientId,
                 Email = patient.Email,
-                Image = patient.Image != null ? $"{_configuration["BaseURL"]}/Images/Patient/{patient.Image}" : null,
+                Image = patient.Image != null ? $"{_configuration["BaseURL"]}/Patient/{patient.Image}" : null,
                 FullName = patient.FullName,
                 gender = patient.gender,
                   Age= patient.Age,

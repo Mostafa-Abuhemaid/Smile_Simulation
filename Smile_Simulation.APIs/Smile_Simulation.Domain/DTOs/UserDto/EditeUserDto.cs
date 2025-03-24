@@ -12,11 +12,11 @@ namespace Smile_Simulation.Domain.DTOs.UserDto
 {
     public class EditeUserDto
     {
-        public string Id { get; set; }
+      
         [Required(ErrorMessage = "The FullName is Required")]
         public string FullName { get; set; }
         public int? age { get; set; }
-        public IFormFile Image { get; set; }
+        public IFormFile? Image { get; set; }
         public Gender Gender { get; set; }
         public int? Experience { get; set; } = 0;
         public string? Qualification { get; set; }

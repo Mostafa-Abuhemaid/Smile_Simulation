@@ -25,8 +25,8 @@ namespace Smile_Simulation.Application.Services
         }
         public async Task<BaseResponse<Advice>> CreateAdviceAsync(CreateAdviceDTO adviceDto)
         {
-
-           var advice = new Advice
+           
+            var advice = new Advice
                    {
               
                 Title=adviceDto.Title,
@@ -35,11 +35,8 @@ namespace Smile_Simulation.Application.Services
                    
                   };
             if (adviceDto.Image != null)
-            {
-               var imagePath = Files.UploadFile(adviceDto.Image, "Category");
-                advice.Image = $"{_configuration["BaseURL"]}/Advice/{imagePath}";
-
-            }
+              advice.Image   = Files.UploadFile(adviceDto.Image, "Category");
+    
             advice.Link = adviceDto.Link ?? advice.Link;
             advice.DescriptionOfLink = adviceDto.DescriptionOfLink ?? advice.DescriptionOfLink;
 
@@ -47,7 +44,7 @@ namespace Smile_Simulation.Application.Services
             await _context.Advices.AddAsync(advice);
             await _context.SaveChangesAsync();
 
-            return new BaseResponse<Advice>(true, $"تم اضافة النصيحة  بنجاح", advice);
+            return new BaseResponse<Advice>(true, $"تم اضافة النصيحة  بنجاح");
         }
 
         public async Task<BaseResponse<bool>> DeleteAdviceAsync(int id)
@@ -55,10 +52,12 @@ namespace Smile_Simulation.Application.Services
             var advice = await _context.Advices.FirstOrDefaultAsync(x => x.Id == id);  
             if(advice != null)
             {
-
+ 
+                if(advice.Image!=null)
+                  Files.DeleteFile(advice.Image, "Advice");
                 _context.Advices.Remove(advice);
                 await _context.SaveChangesAsync();
-                  Files.DeleteFile(advice.Image, "Advice");
+               
                 return new BaseResponse<bool>(true, "تم حذف النصيحة نجاح");
            
             }
@@ -67,13 +66,14 @@ namespace Smile_Simulation.Application.Services
 
         public async Task<BaseResponse<GetAdviceDTO>> GetAdviceByIdAsync(int id)
         {
-            var advice = await _context.Advices.FirstOrDefaultAsync(x=>x.Id == id);
+            var advice = await _context.Advices.Include(c=>c.Category).FirstOrDefaultAsync(x=>x.Id == id);
             if( advice != null )
             {
                 
                 var adviceDTO = new GetAdviceDTO
                 {
-                    Image = $"{_configuration["BaseURL"]}/Advice/{advice.Image}",
+                    Id=advice.Id,
+                    Image = advice.Image != null ? $"{_configuration["BaseURL"]}/Advice/{advice.Image}" : null,
                     Title = advice.Title,
                     Description= advice.Description,
                     Link = advice.Link,
@@ -90,8 +90,8 @@ namespace Smile_Simulation.Application.Services
         {
             var advices = await _context.Advices.Select(advice => new GetAdviceDTO
             {
-
-                Image = $"{_configuration["BaseURL"]}/Advice/{advice.Image}",
+                Id=advice.Id,
+                Image = advice.Image != null ?  $"{_configuration["BaseURL"]}/Advice/{advice.Image}":null,
                 Title = advice.Title,
                 Description = advice.Description,
                 Link = advice.Link,
@@ -108,6 +108,13 @@ namespace Smile_Simulation.Application.Services
 
         public async Task<BaseResponse<Advice>> UpdateAdviceAsync(int id, CreateAdviceDTO adviceDto)
         {
+            var categoryExists = await _context.Categories
+        .AnyAsync(c => c.Id == adviceDto.CategoryId);
+
+            if (!categoryExists)
+            {
+                return new BaseResponse<Advice>(false, "القسم غير موجود");
+            }
             var advice = await _context.Advices.FindAsync(id);
             if (advice == null)
             {
@@ -117,26 +124,22 @@ namespace Smile_Simulation.Application.Services
             advice.Title = adviceDto.Title ?? advice.Title;
             advice.Description = adviceDto.Description ?? advice.Description;
             advice.CategoryId = adviceDto.CategoryId;
-
+            advice.Link = adviceDto.Link ?? advice.Link;
+            advice.DescriptionOfLink = adviceDto.DescriptionOfLink ?? advice.DescriptionOfLink;
             if (adviceDto.Image != null)
             {
                 if (!string.IsNullOrEmpty(advice.Image))
                 {
-                    Files.DeleteFile(advice.Image, "Advice"); 
+                    Files.DeleteFile(advice.Image, "Advice");
                 }
 
-                var imagePath = Files.UploadFile(adviceDto.Image, "Advice");
-                advice.Image = $"{_configuration["BaseURL"]}/Advice/{imagePath}";
+                advice.Image = Files.UploadFile(adviceDto.Image, "Advice");
             }
-
-            
-            advice.Link = adviceDto.Link ?? advice.Link;
-            advice.DescriptionOfLink = adviceDto.DescriptionOfLink ?? advice.DescriptionOfLink;
 
 
             await _context.SaveChangesAsync();
 
-            return new BaseResponse<Advice>(true, "تم تحديث النصيحة بنجاح", advice);
+            return new BaseResponse<Advice>(true, "تم تحديث النصيحة بنجاح");
         }
 
     }

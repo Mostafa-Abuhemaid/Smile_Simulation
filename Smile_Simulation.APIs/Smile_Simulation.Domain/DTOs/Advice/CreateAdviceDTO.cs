@@ -24,6 +24,7 @@ namespace Smile_Simulation.Domain.DTOs.Advice
 
         public string? DescriptionOfLink { get; set; }
         [Required(ErrorMessage = "The Link is requred")]
+        [Range(1, int.MaxValue, ErrorMessage = "Please select a valid category")]
         public int CategoryId { get; set; }
 
     }

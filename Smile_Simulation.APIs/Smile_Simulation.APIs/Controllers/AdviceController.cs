@@ -16,7 +16,7 @@ namespace Smile_Simulation.APIs.Controllers
         }
 
 
-        [HttpGet("GetAllAdviceAsync")]
+        [HttpGet("GetAllAdvices")]
         public async Task<IActionResult> GetAllAdviceAsync()
         {
             var cat = await _adviceService.GetAllAdviceAsync();
@@ -34,14 +34,14 @@ namespace Smile_Simulation.APIs.Controllers
             var cat = await _adviceService.DeleteAdviceAsync(id);
             return cat.Success ? Ok(cat) : NotFound(cat);
         }
-        [HttpPut("UpdateCategory/{id}")]
-        public async Task<IActionResult> UpdateAdviceAsync(int id , CreateAdviceDTO createAdviceDTO)
+        [HttpPut("UpdateAdvice/{id}")]
+        public async Task<IActionResult> UpdateAdviceAsync(int id ,[FromForm] CreateAdviceDTO createAdviceDTO)
         {
             var cat = await _adviceService.UpdateAdviceAsync(id,createAdviceDTO);
             return cat.Success ? Ok(cat) : NotFound(cat);
         }
         [HttpPost()]
-        public async Task<IActionResult> CreateAdviceAsync(CreateAdviceDTO createAdviceDTO)
+        public async Task<IActionResult> CreateAdviceAsync([FromForm] CreateAdviceDTO createAdviceDTO)
         {
             var cat = await _adviceService.CreateAdviceAsync(createAdviceDTO);
             return cat.Success ? Ok(cat) : NotFound(cat);

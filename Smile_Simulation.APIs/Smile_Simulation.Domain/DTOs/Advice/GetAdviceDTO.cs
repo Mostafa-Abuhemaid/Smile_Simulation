@@ -10,6 +10,7 @@ namespace Smile_Simulation.Domain.DTOs.Advice
 {
     public class GetAdviceDTO
     {
+        public int Id {  get; set; }
         public string? Image { get; set; }
 
         public string Title { get; set; }

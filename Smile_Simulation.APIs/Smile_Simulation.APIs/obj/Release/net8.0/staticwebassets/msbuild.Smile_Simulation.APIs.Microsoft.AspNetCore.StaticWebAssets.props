@@ -1,5 +1,101 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Advice\17cf2abc-1416-4869-bb7f-20478a314b7dنصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Smile_Simulation.APIs</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Smile_Simulation.APIs</BasePath>
+      <RelativePath>Advice/17cf2abc-1416-4869-bb7f-20478a314b7dنصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Advice\17cf2abc-1416-4869-bb7f-20478a314b7dنصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Advice\183ff655-dc67-45a7-ae1d-17acb6449fe9نصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Smile_Simulation.APIs</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Smile_Simulation.APIs</BasePath>
+      <RelativePath>Advice/183ff655-dc67-45a7-ae1d-17acb6449fe9نصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Advice\183ff655-dc67-45a7-ae1d-17acb6449fe9نصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Advice\18e564f9-d134-4980-952d-438c8c4e6a77نصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Smile_Simulation.APIs</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Smile_Simulation.APIs</BasePath>
+      <RelativePath>Advice/18e564f9-d134-4980-952d-438c8c4e6a77نصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Advice\18e564f9-d134-4980-952d-438c8c4e6a77نصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Advice\28e32ce4-cea0-4e61-9609-4274a7ef31d1imageProfile.jpeg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Smile_Simulation.APIs</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Smile_Simulation.APIs</BasePath>
+      <RelativePath>Advice/28e32ce4-cea0-4e61-9609-4274a7ef31d1imageProfile.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Advice\28e32ce4-cea0-4e61-9609-4274a7ef31d1imageProfile.jpeg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Advice\8e8ec96a-98f9-4921-b945-4eb5b5ae1d99نصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Smile_Simulation.APIs</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Smile_Simulation.APIs</BasePath>
+      <RelativePath>Advice/8e8ec96a-98f9-4921-b945-4eb5b5ae1d99نصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Advice\8e8ec96a-98f9-4921-b945-4eb5b5ae1d99نصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Advice\bd65298f-13a5-42a6-8ed9-7b850dcc5f6eنصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Smile_Simulation.APIs</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Smile_Simulation.APIs</BasePath>
+      <RelativePath>Advice/bd65298f-13a5-42a6-8ed9-7b850dcc5f6eنصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Advice\bd65298f-13a5-42a6-8ed9-7b850dcc5f6eنصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Category\07d88ccd-f866-4e15-ab3d-f24edb7efdd2نصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Smile_Simulation.APIs</SourceId>
@@ -79,6 +175,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Category\b529f7fb-5ac9-4637-b53a-de7b0c07ee36نصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Category\bb30c3b8-8f4f-42cb-ae8f-26b699607262نصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Smile_Simulation.APIs</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Smile_Simulation.APIs</BasePath>
+      <RelativePath>Category/bb30c3b8-8f4f-42cb-ae8f-26b699607262نصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Category\bb30c3b8-8f4f-42cb-ae8f-26b699607262نصائح-مفيدة-خلال-تقويم-الأسنان-1-1024x597.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Doctor\Card\007c8158-5511-4393-8f3c-ae74ce22de83709106860_max.jpg))">
       <SourceType>Package</SourceType>
@@ -864,22 +976,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\02d49a9f-68c5-465d-bfa0-928d5077f018461241805_478578341833289_4644538530017415793_n (1).jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\14f7ccef-3ff3-490e-9b3f-0b75682925a9461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/14f7ccef-3ff3-490e-9b3f-0b75682925a9461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\14f7ccef-3ff3-490e-9b3f-0b75682925a9461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\179a8c9a-4c36-44cd-bc5a-ae1b5bfe1d84709106860_max.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Smile_Simulation.APIs</SourceId>
@@ -896,12 +992,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\179a8c9a-4c36-44cd-bc5a-ae1b5bfe1d84709106860_max.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\19396434-3b5d-448e-bceb-28f61bc104c4461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\bc7ec53b-0960-4dba-ac18-e629961e94f2imageProfile.jpeg))">
       <SourceType>Package</SourceType>
       <SourceId>Smile_Simulation.APIs</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/19396434-3b5d-448e-bceb-28f61bc104c4461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
+      <RelativePath>Patient/bc7ec53b-0960-4dba-ac18-e629961e94f2imageProfile.jpeg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -910,439 +1006,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\19396434-3b5d-448e-bceb-28f61bc104c4461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\26937612-d366-4520-ac2d-f1cd79589859461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/26937612-d366-4520-ac2d-f1cd79589859461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\26937612-d366-4520-ac2d-f1cd79589859461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\34223412-e40f-47bf-8621-f8ca691838d0461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/34223412-e40f-47bf-8621-f8ca691838d0461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\34223412-e40f-47bf-8621-f8ca691838d0461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\34b3866e-0fce-4904-833f-0a8920f4a74bAOS - Chapter 1 (1).pdf))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/34b3866e-0fce-4904-833f-0a8920f4a74bAOS - Chapter 1 (1).pdf</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\34b3866e-0fce-4904-833f-0a8920f4a74bAOS - Chapter 1 (1).pdf))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\3a611f5c-6438-4848-979a-97af89cacf62461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/3a611f5c-6438-4848-979a-97af89cacf62461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\3a611f5c-6438-4848-979a-97af89cacf62461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\44e07872-4aff-4272-82ed-7f5495717c61461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/44e07872-4aff-4272-82ed-7f5495717c61461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\44e07872-4aff-4272-82ed-7f5495717c61461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\457a5f7a-9c44-49dd-95bb-172a270d587b461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/457a5f7a-9c44-49dd-95bb-172a270d587b461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\457a5f7a-9c44-49dd-95bb-172a270d587b461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\518554be-a405-4464-be43-ffcbb03b3f3e461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/518554be-a405-4464-be43-ffcbb03b3f3e461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\518554be-a405-4464-be43-ffcbb03b3f3e461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\538798af-d5a2-4ae0-a12d-d624544e5bb2461075320_478554075169049_8829649525312081704_n.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/538798af-d5a2-4ae0-a12d-d624544e5bb2461075320_478554075169049_8829649525312081704_n.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\538798af-d5a2-4ae0-a12d-d624544e5bb2461075320_478554075169049_8829649525312081704_n.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\62ceb578-56cc-4c90-a023-2fd2fdbc731b709106860_max.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/62ceb578-56cc-4c90-a023-2fd2fdbc731b709106860_max.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\62ceb578-56cc-4c90-a023-2fd2fdbc731b709106860_max.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\73c05835-0f98-47f1-92f8-86ca1c9ebf1c61bMJdgeryL._AC_SX679_.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/73c05835-0f98-47f1-92f8-86ca1c9ebf1c61bMJdgeryL._AC_SX679_.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\73c05835-0f98-47f1-92f8-86ca1c9ebf1c61bMJdgeryL._AC_SX679_.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\750377d3-39bf-457e-9dff-598ee1e42fd3461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/750377d3-39bf-457e-9dff-598ee1e42fd3461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\750377d3-39bf-457e-9dff-598ee1e42fd3461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\7777a3d8-43c1-4ceb-8610-d5dff1e9527e461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/7777a3d8-43c1-4ceb-8610-d5dff1e9527e461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\7777a3d8-43c1-4ceb-8610-d5dff1e9527e461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\7912ea73-c827-4a85-9fff-23059f154954461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/7912ea73-c827-4a85-9fff-23059f154954461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\7912ea73-c827-4a85-9fff-23059f154954461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\845fbe8b-7c92-4380-80ec-a900c0c66355461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/845fbe8b-7c92-4380-80ec-a900c0c66355461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\845fbe8b-7c92-4380-80ec-a900c0c66355461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\84d2815b-7886-40bc-b2b8-b1c5e79b8052709106860_max.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/84d2815b-7886-40bc-b2b8-b1c5e79b8052709106860_max.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\84d2815b-7886-40bc-b2b8-b1c5e79b8052709106860_max.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\9667dcd5-82f7-484e-bdaa-63bf4e4c1e60461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/9667dcd5-82f7-484e-bdaa-63bf4e4c1e60461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\9667dcd5-82f7-484e-bdaa-63bf4e4c1e60461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\9bf08248-e90d-4324-a666-5857f490e383461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/9bf08248-e90d-4324-a666-5857f490e383461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\9bf08248-e90d-4324-a666-5857f490e383461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\a5594c21-e14a-4585-b56e-1202dc18939861bMJdgeryL._AC_SX679_.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/a5594c21-e14a-4585-b56e-1202dc18939861bMJdgeryL._AC_SX679_.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\a5594c21-e14a-4585-b56e-1202dc18939861bMJdgeryL._AC_SX679_.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\b18bac70-c6d2-4e66-87bb-8b29e747e52c461073814_478636445160812_947375196979860546_n.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/b18bac70-c6d2-4e66-87bb-8b29e747e52c461073814_478636445160812_947375196979860546_n.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\b18bac70-c6d2-4e66-87bb-8b29e747e52c461073814_478636445160812_947375196979860546_n.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\b1b9531f-24f5-43ef-a84a-8e71970a6a36461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/b1b9531f-24f5-43ef-a84a-8e71970a6a36461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\b1b9531f-24f5-43ef-a84a-8e71970a6a36461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\b41d5383-9352-40e5-8606-77a15fbcf8aa461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/b41d5383-9352-40e5-8606-77a15fbcf8aa461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\b41d5383-9352-40e5-8606-77a15fbcf8aa461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\bbc53d2e-02df-419e-b624-6e235a33177c461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/bbc53d2e-02df-419e-b624-6e235a33177c461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\bbc53d2e-02df-419e-b624-6e235a33177c461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\be0eb529-1607-42aa-9dac-457eee19306a61bMJdgeryL._AC_SX679_.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/be0eb529-1607-42aa-9dac-457eee19306a61bMJdgeryL._AC_SX679_.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\be0eb529-1607-42aa-9dac-457eee19306a61bMJdgeryL._AC_SX679_.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\c328e40d-38dd-41c8-b7ba-d2e780379b60461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/c328e40d-38dd-41c8-b7ba-d2e780379b60461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\c328e40d-38dd-41c8-b7ba-d2e780379b60461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\ce9c6148-0eba-4b60-962a-6a5a058474b2709106860_max.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/ce9c6148-0eba-4b60-962a-6a5a058474b2709106860_max.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\ce9c6148-0eba-4b60-962a-6a5a058474b2709106860_max.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\cf55b7ed-3c13-4c4f-b50e-3d3ac13dfbff461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/cf55b7ed-3c13-4c4f-b50e-3d3ac13dfbff461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\cf55b7ed-3c13-4c4f-b50e-3d3ac13dfbff461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\eb21d0ca-f7a4-432f-915e-4c640bd3d832461075320_478554075169049_8829649525312081704_n - Copy.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Smile_Simulation.APIs</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Smile_Simulation.APIs</BasePath>
-      <RelativePath>Patient/eb21d0ca-f7a4-432f-915e-4c640bd3d832461075320_478554075169049_8829649525312081704_n - Copy.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\eb21d0ca-f7a4-432f-915e-4c640bd3d832461075320_478554075169049_8829649525312081704_n - Copy.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\bc7ec53b-0960-4dba-ac18-e629961e94f2imageProfile.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>
