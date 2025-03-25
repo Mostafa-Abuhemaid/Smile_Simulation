@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "r8ynjmFwN3DAzYC1uzlOIh/LxgyR7SV9n7n7lABPfVQ=",
+  "Hash": "Uwqxwb23qKnhxpfsYOqZ05LBRByQuBqor0azS0wSVf4=",
   "Source": "Smile_Simulation.APIs",
   "BasePath": "_content/Smile_Simulation.APIs",
   "Mode": "Default",
@@ -967,6 +967,25 @@
       "OriginalItemSpec": "wwwroot\\Doctor\\Profile\\75e7fe9c-d29e-4e60-9ad1-e9fa8803b293709106860_max.jpg"
     },
     {
+      "Identity": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\wwwroot\\Doctor\\Profile\\80e07d4b-48f9-4c7a-a913-4fa908f78912imageProfile.jpeg",
+      "SourceId": "Smile_Simulation.APIs",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\wwwroot\\",
+      "BasePath": "_content/Smile_Simulation.APIs",
+      "RelativePath": "Doctor/Profile/80e07d4b-48f9-4c7a-a913-4fa908f78912imageProfile.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Doctor\\Profile\\80e07d4b-48f9-4c7a-a913-4fa908f78912imageProfile.jpeg"
+    },
+    {
       "Identity": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\wwwroot\\Doctor\\Profile\\8fb002be-adc2-4634-a2ff-0dbf4a75b847461075320_478554075169049_8829649525312081704_n - Copy.jpg",
       "SourceId": "Smile_Simulation.APIs",
       "SourceType": "Discovered",
@@ -1041,25 +1060,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Doctor\\Profile\\b2ae99a3-e6cc-41cf-a8f8-754cfb267ca4709106860_max.jpg"
-    },
-    {
-      "Identity": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\wwwroot\\Doctor\\Profile\\b47ff14c-dd28-484e-b3f1-6e7242c3095b6515860.webp",
-      "SourceId": "Smile_Simulation.APIs",
-      "SourceType": "Discovered",
-      "ContentRoot": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\wwwroot\\",
-      "BasePath": "_content/Smile_Simulation.APIs",
-      "RelativePath": "Doctor/Profile/b47ff14c-dd28-484e-b3f1-6e7242c3095b6515860.webp",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Doctor\\Profile\\b47ff14c-dd28-484e-b3f1-6e7242c3095b6515860.webp"
     },
     {
       "Identity": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\wwwroot\\Doctor\\Profile\\c3e0ec48-2600-4fd5-9840-c31850bde462709106860_max.jpg",

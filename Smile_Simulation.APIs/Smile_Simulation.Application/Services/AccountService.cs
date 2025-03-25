@@ -72,11 +72,11 @@ namespace Smile_Simulation.Application.Services
                 if (!result.Succeeded) return new BaseResponse<TokenDTO>(false, "كلمة السر غير صحيحة");
             var roles = await _userManager.GetRolesAsync(user);
             string imageUrl;
-            if (roles.Contains("Doctor")) // Check if user has Doctor role
+            if (roles.Contains("Doctor")) 
             {
                 imageUrl = $"{_configuration["BaseURL"]}/Doctor/Profile/{user.Image}";
             }
-            else // Default to Patient
+            else 
             {
                 imageUrl = $"{_configuration["BaseURL"]}/Patient/{user.Image}";
             }

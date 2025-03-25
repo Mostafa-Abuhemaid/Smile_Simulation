@@ -436,7 +436,7 @@
   {
     "ContainingType": "Smile_Simulation.APIs.Controllers.UserController",
     "Method": "EditUserDetils",
-    "RelativePath": "api/User/EditUserDetils",
+    "RelativePath": "api/User/EditUserDetails",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -491,8 +491,24 @@
   },
   {
     "ContainingType": "Smile_Simulation.APIs.Controllers.UserController",
+    "Method": "EditUserImage",
+    "RelativePath": "api/User/EditUserImage",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Image",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Smile_Simulation.APIs.Controllers.UserController",
     "Method": "GetUserDetils",
-    "RelativePath": "api/User/GetUserDetils",
+    "RelativePath": "api/User/GetUserDetails",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

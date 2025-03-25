@@ -1,4 +1,5 @@
-﻿using Smile_Simulation.Domain.DTOs.DoctorDto;
+﻿using Microsoft.AspNetCore.Http;
+using Smile_Simulation.Domain.DTOs.DoctorDto;
 using Smile_Simulation.Domain.DTOs.PatientDto;
 using Smile_Simulation.Domain.DTOs.UserDto;
 using Smile_Simulation.Domain.Response;
@@ -16,6 +17,7 @@ namespace Smile_Simulation.Domain.Interfaces.Services
         Task<BaseResponse<SendPatientDTO>> GetPatientDetailsAsync(string PatientId,string role);
         Task<BaseResponse<SendDoctorDTO>> EditDoctorDetailsAsync(string userId,EditeUserDto userDto);
         Task<BaseResponse<SendPatientDTO>> EditPatientDetailsAsync(string userId, EditeUserDto userDto);
+        Task<BaseResponse<bool>> EditUserImagesAsync(string userId, EditUserImageDto Image);
 
     }
 }

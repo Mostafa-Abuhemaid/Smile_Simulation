@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
@@ -8,6 +9,7 @@ using Smile_Simulation.Domain.DTOs.DoctorDto;
 using Smile_Simulation.Domain.DTOs.PatientDto;
 using Smile_Simulation.Domain.DTOs.UserDto;
 using Smile_Simulation.Domain.Entities;
+using Smile_Simulation.Domain.Enums;
 using Smile_Simulation.Domain.Interfaces.Services;
 using Smile_Simulation.Domain.Response;
 using Smile_Simulation.Infrastructure.Data;
@@ -54,7 +56,7 @@ namespace Smile_Simulation.Application.Services
                 }
                 catch (Exception ex)
                 {
-                    // Log image handling error
+                   
                     return new BaseResponse<SendDoctorDTO>(false, "حدث خطأ أثناء معالجة الصورة");
                 }
             }
@@ -90,7 +92,7 @@ namespace Smile_Simulation.Application.Services
                 }
                 catch (Exception ex)
                 {
-                    // Log image handling error
+                   
                     return new BaseResponse<SendPatientDTO>(false, "حدث خطأ أثناء معالجة الصورة");
                 }
             }
@@ -102,6 +104,49 @@ namespace Smile_Simulation.Application.Services
             await _DbContext.SaveChangesAsync();
 
             return new BaseResponse<SendPatientDTO>(true, "  تم تعديل البيانات بنجاح");
+        }
+
+        public async Task<BaseResponse<bool>> EditUserImagesAsync(string userId, EditUserImageDto file)
+        {
+           var User =await _userManager.FindByIdAsync(userId);
+           
+           string imageUrl;
+            if(User == null)
+                return new BaseResponse<bool>(false, "المستخدم غير موجود");
+             var roles = await _userManager.GetRolesAsync(User);
+            if (User.Image != null)
+            {
+                if (roles.Contains("Doctor"))
+                {
+                    Files.DeleteFile(User.Image, "Doctor\\Profile");
+                    User.Image = Files.UploadFile(file.Image, "Doctor\\Profile");
+                }
+                else
+                {
+                    Files.DeleteFile(User.Image, "Patient");
+                    User.Image = Files.UploadFile(file.Image, "Patient");
+                }
+                await _DbContext.SaveChangesAsync();
+                return new BaseResponse<bool>(true, "تم تعديل البيانات بنجاح");
+            }
+            else
+            {
+                if (roles.Contains("Doctor"))
+                {
+                   
+                    User.Image = Files.UploadFile(file.Image, "Doctor\\Profile");
+                }
+                else
+                {
+                  
+                    User.Image = Files.UploadFile(file.Image, "Patient");
+                }
+                await _DbContext.SaveChangesAsync();
+                return new BaseResponse<bool>(true, "تم تعديل البيانات بنجاح");
+            }
+            
+            
+          
         }
 
         public async Task<BaseResponse<SendDoctorDTO>> GetDoctorDetailsAsync(string DoctorId,string role)

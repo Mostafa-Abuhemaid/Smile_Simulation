@@ -25,7 +25,7 @@ namespace Smile_Simulation.APIs.Controllers
             _userManager = userManager;
         }
         [Authorize]
-        [HttpGet("GetUserDetils")]
+        [HttpGet("GetUserDetails")]
         public async Task<IActionResult> GetUserDetils()
         {
             var role = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
@@ -46,7 +46,7 @@ namespace Smile_Simulation.APIs.Controllers
             }
         }
         [Authorize]
-        [HttpPut("EditUserDetils")]
+        [HttpPut("EditUserDetails")]
         public async Task<IActionResult> EditUserDetils([FromForm]EditeUserDto userDto)
         {
             var role = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
@@ -65,6 +65,22 @@ namespace Smile_Simulation.APIs.Controllers
                var result = await _userService.EditPatientDetailsAsync(userId, userDto);
                return result.Success ? Ok(result) : BadRequest(result);
            }
-        } 
+        }
+        [Authorize]
+        [HttpPut("EditUserImage")]
+        public async Task<IActionResult> EditUserImage([FromForm] EditUserImageDto Image)
+        {
+            if (Image == null)
+            {
+                return BadRequest("Image file is required.");
+            }
+            var userId = User?.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null)
+            {
+                return Unauthorized("User not authenticated.");
+            }            
+                var result = await _userService.EditUserImagesAsync(userId, Image);
+                return result.Success ? Ok(result) : BadRequest(result);
+        }
     }
 }
