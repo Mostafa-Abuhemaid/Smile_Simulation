@@ -217,6 +217,10 @@
       "PackagePath": "staticwebassets\\Doctor\\Profile\\b2ae99a3-e6cc-41cf-a8f8-754cfb267ca4709106860_max.jpg"
     },
     {
+      "Id": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\wwwroot\\Doctor\\Profile\\b47ff14c-dd28-484e-b3f1-6e7242c3095b6515860.webp",
+      "PackagePath": "staticwebassets\\Doctor\\Profile\\b47ff14c-dd28-484e-b3f1-6e7242c3095b6515860.webp"
+    },
+    {
       "Id": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\wwwroot\\Doctor\\Profile\\c3e0ec48-2600-4fd5-9840-c31850bde462709106860_max.jpg",
       "PackagePath": "staticwebassets\\Doctor\\Profile\\c3e0ec48-2600-4fd5-9840-c31850bde462709106860_max.jpg"
     },
@@ -247,6 +251,14 @@
     {
       "Id": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\wwwroot\\Patient\\179a8c9a-4c36-44cd-bc5a-ae1b5bfe1d84709106860_max.jpg",
       "PackagePath": "staticwebassets\\Patient\\179a8c9a-4c36-44cd-bc5a-ae1b5bfe1d84709106860_max.jpg"
+    },
+    {
+      "Id": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\wwwroot\\Patient\\2acb1208-5482-4577-9254-af116df2b1b46515860.webp",
+      "PackagePath": "staticwebassets\\Patient\\2acb1208-5482-4577-9254-af116df2b1b46515860.webp"
+    },
+    {
+      "Id": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\wwwroot\\Patient\\5c31d2f0-ad29-4e2c-b206-3d646933d7e31.jpg",
+      "PackagePath": "staticwebassets\\Patient\\5c31d2f0-ad29-4e2c-b206-3d646933d7e31.jpg"
     },
     {
       "Id": "F:\\Final Project\\Smile_Simulation\\Smile_Simulation.APIs\\Smile_Simulation.APIs\\wwwroot\\Patient\\bc7ec53b-0960-4dba-ac18-e629961e94f2imageProfile.jpeg",

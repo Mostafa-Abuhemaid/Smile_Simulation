@@ -34,8 +34,8 @@ namespace Smile_Simulation.APIs.Controllers
             var cat = await _adviceService.DeleteAdviceAsync(id);
             return cat.Success ? Ok(cat) : NotFound(cat);
         }
-        [HttpPut("UpdateAdvice/{id}")]
-        public async Task<IActionResult> UpdateAdviceAsync(int id ,[FromForm] CreateAdviceDTO createAdviceDTO)
+        [HttpPut("UpdateAdvice")]
+        public async Task<IActionResult> UpdateAdviceAsync([FromQuery]int id ,[FromForm] CreateAdviceDTO createAdviceDTO)
         {
             var cat = await _adviceService.UpdateAdviceAsync(id,createAdviceDTO);
             return cat.Success ? Ok(cat) : NotFound(cat);

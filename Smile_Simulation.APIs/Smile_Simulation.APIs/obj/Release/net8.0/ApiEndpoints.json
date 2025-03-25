@@ -301,7 +301,7 @@
   {
     "ContainingType": "Smile_Simulation.APIs.Controllers.AdviceController",
     "Method": "UpdateAdviceAsync",
-    "RelativePath": "api/Advice/UpdateAdvice/{id}",
+    "RelativePath": "api/Advice/UpdateAdvice",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -309,7 +309,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "Image",

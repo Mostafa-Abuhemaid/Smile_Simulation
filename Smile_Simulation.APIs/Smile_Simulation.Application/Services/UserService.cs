@@ -41,15 +41,22 @@ namespace Smile_Simulation.Application.Services
             var Doc = await _DbContext.Doctors.FirstOrDefaultAsync(d => d.Id == userId);
             if (Doc == null)
                 return new BaseResponse<SendDoctorDTO>(false, "المستخدم غير موجود");
-       
+
             if (userDto.Image != null)
             {
-                if (!string.IsNullOrEmpty(Doc.Image))
+                try
                 {
-                    Files.DeleteFile(Doc.Image, "Advice");
+                    if (!string.IsNullOrEmpty(Doc.Image))
+                    {
+                        Files.DeleteFile(Doc.Image, "Doctor\\Profile");
+                    }
+                    Doc.Image = Files.UploadFile(userDto.Image, "Doctor\\Profile");
                 }
-
-                Doc.Image = Files.UploadFile(userDto.Image, "Advice");
+                catch (Exception ex)
+                {
+                    // Log image handling error
+                    return new BaseResponse<SendDoctorDTO>(false, "حدث خطأ أثناء معالجة الصورة");
+                }
             }
 
             Doc.FullName = userDto.FullName;
@@ -70,18 +77,24 @@ namespace Smile_Simulation.Application.Services
             var patient = await _DbContext.Patients.FirstOrDefaultAsync(d => d.Id == userId);
             if (patient == null)
                 return new BaseResponse<SendPatientDTO>(false, "المستخدم غير موجود");
-
-           
+          
             if (userDto.Image != null)
             {
-                if (!string.IsNullOrEmpty(patient.Image))
+                try
                 {
-                    Files.DeleteFile(patient.Image, "Advice");
+                    if (!string.IsNullOrEmpty(patient.Image))
+                    {
+                        Files.DeleteFile(patient.Image, "Patient");
+                    }
+                    patient.Image = Files.UploadFile(userDto.Image, "Patient");
                 }
-
-                patient.Image = Files.UploadFile(userDto.Image, "Patient");
+                catch (Exception ex)
+                {
+                    // Log image handling error
+                    return new BaseResponse<SendPatientDTO>(false, "حدث خطأ أثناء معالجة الصورة");
+                }
             }
-            patient.FullName = userDto.FullName;
+                patient.FullName = userDto.FullName;
            patient.gender = userDto.Gender;
            patient.Age = userDto.age??0;
            patient.Address = userDto.Address;

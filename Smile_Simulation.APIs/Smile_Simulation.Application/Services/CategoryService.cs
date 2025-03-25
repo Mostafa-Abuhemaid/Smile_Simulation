@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Smile_Simulation.Domain.DTOs.Advice;
 using Smile_Simulation.Domain.DTOs.CategoryDto;
 using Smile_Simulation.Domain.Entities;
 using Smile_Simulation.Domain.Interfaces.Services;
@@ -108,30 +109,33 @@ namespace Smile_Simulation.Application.Services
             }
         }
 
-        public async Task<BaseResponse<GetCategoryDTO>> GetCategoryByIdAsync(int id)
+        public async Task<BaseResponse<List<GetAdviceDTO>>> GetCategoryByIdAsync(int id)
         {
             try
             {
-                var category = await _dbContext.Categories.Include(A=>A.advices).FirstOrDefaultAsync(C=>C.Id == id);
-                if (category == null)
+                var advices = await _dbContext.Advices.Where(A => A.CategoryId == id).Include(C => C.Category).ToListAsync();
+                if (advices == null)
                 {
-                    return new BaseResponse<GetCategoryDTO>(false, "القسم غير موجود.");
+                    return new BaseResponse<List<GetAdviceDTO>>(false, "لا يوجد نصائح في هذا القسم");
                 }
-
-                string baseUrl = _configuration["BaseURL"] ?? "http://smilesimulation.runasp.net";
-                var categoryDto = new GetCategoryDTO
+                var adviceDtos = advices.Select(a => new GetAdviceDTO
                 {
-                    Id = category.Id,
-                    Name = category.Name,
-                    Image = $"{baseUrl}/category/{category.Image}"
-                };
+                    Id = a.Id,
+                    Image = a.Image,
+                    Title = a.Title,
+                    Description = a.Description,
+                    Link = a.Link,
+                    DescriptionOfLink = a.DescriptionOfLink,
+                    CategoryId = a.CategoryId,
+                    Category = a.Category.Name // Assuming Category has a "Name" property
+                }).ToList();
 
-                return new BaseResponse<GetCategoryDTO>(true, "تم استرجاع القسم بنجاح", categoryDto);
+                return new BaseResponse<List<GetAdviceDTO>>(true, "تم استرجاع نصائح القسم بنجاح", adviceDtos);
             }
             catch (Exception ex)
             {
                 Console.Error.WriteLine($"Error fetching category by ID: {ex}");
-                return new BaseResponse<GetCategoryDTO>(false, "حدث خطأ أثناء جلب البيانات");
+                return new BaseResponse<List < GetAdviceDTO >> (false, "حدث خطأ أثناء جلب البيانات");
             }
         }
 

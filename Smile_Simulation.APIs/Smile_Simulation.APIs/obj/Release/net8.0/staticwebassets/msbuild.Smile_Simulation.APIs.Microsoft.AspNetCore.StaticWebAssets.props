@@ -864,6 +864,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Doctor\Profile\b2ae99a3-e6cc-41cf-a8f8-754cfb267ca4709106860_max.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Doctor\Profile\b47ff14c-dd28-484e-b3f1-6e7242c3095b6515860.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Smile_Simulation.APIs</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Smile_Simulation.APIs</BasePath>
+      <RelativePath>Doctor/Profile/b47ff14c-dd28-484e-b3f1-6e7242c3095b6515860.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Doctor\Profile\b47ff14c-dd28-484e-b3f1-6e7242c3095b6515860.webp))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Doctor\Profile\c3e0ec48-2600-4fd5-9840-c31850bde462709106860_max.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Smile_Simulation.APIs</SourceId>
@@ -991,6 +1007,38 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\179a8c9a-4c36-44cd-bc5a-ae1b5bfe1d84709106860_max.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\2acb1208-5482-4577-9254-af116df2b1b46515860.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Smile_Simulation.APIs</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Smile_Simulation.APIs</BasePath>
+      <RelativePath>Patient/2acb1208-5482-4577-9254-af116df2b1b46515860.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\2acb1208-5482-4577-9254-af116df2b1b46515860.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\5c31d2f0-ad29-4e2c-b206-3d646933d7e31.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Smile_Simulation.APIs</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Smile_Simulation.APIs</BasePath>
+      <RelativePath>Patient/5c31d2f0-ad29-4e2c-b206-3d646933d7e31.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\5c31d2f0-ad29-4e2c-b206-3d646933d7e31.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Patient\bc7ec53b-0960-4dba-ac18-e629961e94f2imageProfile.jpeg))">
       <SourceType>Package</SourceType>

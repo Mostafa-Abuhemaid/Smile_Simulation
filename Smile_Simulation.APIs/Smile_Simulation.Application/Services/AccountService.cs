@@ -61,22 +61,32 @@ namespace Smile_Simulation.Application.Services
 
         public async Task<BaseResponse<TokenDTO>> LoginAsync(LoginDto loginDto)
         {
-           
-                var user = await _userManager.FindByEmailAsync(loginDto.Email);
+            if (loginDto == null)
+                return new BaseResponse<TokenDTO>(false, "بيانات الدخول مطلوبة");
+
+            var user = await _userManager.FindByEmailAsync(loginDto.Email);
                 if (user == null) return new BaseResponse<TokenDTO>(false, "البريد الاكتروني غير صحيح");
 
                 var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
 
                 if (!result.Succeeded) return new BaseResponse<TokenDTO>(false, "كلمة السر غير صحيحة");
-
-                var Url = $"{_configuration["BaseURL"]}/Images/Product/{user.Image}";
-                var res = new TokenDTO
+            var roles = await _userManager.GetRolesAsync(user);
+            string imageUrl;
+            if (roles.Contains("Doctor")) // Check if user has Doctor role
+            {
+                imageUrl = $"{_configuration["BaseURL"]}/Doctor/Profile/{user.Image}";
+            }
+            else // Default to Patient
+            {
+                imageUrl = $"{_configuration["BaseURL"]}/Patient/{user.Image}";
+            }
+            var res = new TokenDTO
                 {
                     UserId=user.Id,
                     Email = user.Email,
                     FullName = user.FullName,
                     gender = user.gender,
-                    Image = Url,
+                    Image = imageUrl,
                     Token = await _tokenService.GenerateTokenAsync(user, _userManager)
                 };
 
